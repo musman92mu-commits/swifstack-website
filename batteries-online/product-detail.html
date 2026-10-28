@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energizer Ultimate Lithium AA 16-Pack — BatteryPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="toast" id="toast">
+  <span class="toast-icon">✅</span>
+  <span class="toast-msg"></span>
+</div>
+
+<div class="header-top">⚡ Free Shipping on orders over $35 — Use code: POWER10 for 10% off</div>
+<header>
+  <nav class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">⚡</div>
+      Battery<span>Pro</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="#">Brands</a>
+      <a href="#">Bulk Orders</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <div class="search-bar">
+        <input type="text" placeholder="Search batteries, brands…" />
+        <button>🔍</button>
+      </div>
+      <button class="cart-btn" onclick="showToast('Cart is empty')">
+        🛒
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Breadcrumb -->
+<div class="page-header" style="padding:20px 0;">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span>
+      <a href="products.html">Products</a><span>/</span>
+      <a href="products.html">Lithium Batteries</a><span>/</span>
+      <span style="color:#fff;">Energizer Ultimate Lithium AA</span>
+    </div>
+  </div>
+</div>
+
+<!-- Product Detail -->
+<div class="container">
+  <div class="detail-layout">
+
+    <!-- Gallery -->
+    <div class="detail-gallery">
+      <div class="main-img">⚡</div>
+      <div class="thumb-row">
+        <div class="thumb active">⚡</div>
+        <div class="thumb">🔋</div>
+        <div class="thumb">📦</div>
+        <div class="thumb">🔍</div>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="detail-info">
+      <div style="font-size:12px;font-weight:700;color:#adb5bd;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">ENERGIZER</div>
+      <h1>Ultimate Lithium AA Batteries — 16-Pack</h1>
+
+      <div class="detail-meta">
+        <div class="product-rating">
+          <span class="stars" style="font-size:16px;">★★★★★</span>
+          <span style="font-size:14px;color:#6c757d;">4.9 (1,520 reviews)</span>
+        </div>
+        <span class="in-stock">✔ In Stock</span>
+        <span style="font-size:13px;color:#6c757d;">SKU: ENR-L91SBP-16</span>
+      </div>
+
+      <div class="detail-price">
+        $19.49
+        <span class="old">$24.99</span>
+        <span class="save">Save $5.50</span>
+      </div>
+      <p style="font-size:13px;color:#6c757d;margin-bottom:20px;">or 4 interest-free payments of $4.87 with <strong>Klarna</strong></p>
+
+      <p class="detail-desc">
+        Energizer Ultimate Lithium AA batteries are the #1 longest-lasting AA battery available. Up to 9× longer in high-tech devices vs. standard alkaline. Leak-proof, performs in extreme temperatures from -40°F to 140°F. Perfect for cameras, game controllers, flashlights, and more.
+      </p>
+
+      <!-- Pack Size -->
+      <div class="option-group">
+        <div class="option-label">Pack Size</div>
+        <div class="option-pills">
+          <button class="pill">4-Pack</button>
+          <button class="pill">8-Pack</button>
+          <button class="pill active">16-Pack</button>
+          <button class="pill">24-Pack</button>
+        </div>
+      </div>
+
+      <!-- Quantity -->
+      <div class="qty-row">
+        <div class="option-label" style="margin:0;">Quantity</div>
+        <div class="qty-control">
+          <button class="qty-minus">−</button>
+          <span>1</span>
+          <button class="qty-plus">+</button>
+        </div>
+        <span style="font-size:13px;color:#6c757d;">12 units left</span>
+      </div>
+
+      <!-- Actions -->
+      <div class="detail-actions">
+        <button class="btn btn-primary" onclick="updateCart()">🛒 Add to Cart</button>
+        <button class="btn btn-dark" onclick="updateCart(); showToast('Proceeding to checkout…')">Buy Now</button>
+        <button class="wishlist-btn">🤍</button>
+      </div>
+
+      <!-- Features -->
+      <div class="sidebar-card" style="margin-top:0;">
+        <div class="features-list">
+          <div class="feature-item"><span class="feature-icon">✔</span> #1 longest-lasting AA lithium battery</div>
+          <div class="feature-item"><span class="feature-icon">✔</span> 9× longer in high-tech devices vs. alkaline</div>
+          <div class="feature-item"><span class="feature-icon">✔</span> Leak-proof construction guaranteed</div>
+          <div class="feature-item"><span class="feature-icon">✔</span> Works in extreme temps: −40°F to 140°F</div>
+          <div class="feature-item"><span class="feature-icon">✔</span> 20-year shelf life when stored properly</div>
+          <div class="feature-item">🚚 Free shipping — arrives in 2–3 business days</div>
+          <div class="feature-item">↩️ 30-day hassle-free returns</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="detail-tabs">
+    <div class="tab-header">
+      <button class="tab-btn active" data-tab="tab-specs">Specifications</button>
+      <button class="tab-btn" data-tab="tab-reviews">Reviews (1,520)</button>
+      <button class="tab-btn" data-tab="tab-faq">FAQ</button>
+    </div>
+
+    <div class="tab-content active" id="tab-specs">
+      <table style="width:100%;border-collapse:collapse;">
+        <tr style="border-bottom:1px solid #e9ecef;"><td style="padding:12px 0;font-weight:600;color:#0d1b2a;width:200px;">Battery Type</td><td style="padding:12px 0;color:#6c757d;">Lithium</td></tr>
+        <tr style="border-bottom:1px solid #e9ecef;"><td style="padding:12px 0;font-weight:600;color:#0d1b2a;">Size</td><td style="padding:12px 0;color:#6c757d;">AA (LR6)</td></tr>
+        <tr style="border-bottom:1px solid #e9ecef;"><td style="padding:12px 0;font-weight:600;color:#0d1b2a;">Voltage</td><td style="padding:12px 0;color:#6c757d;">1.5V</td></tr>
+        <tr style="border-bottom:1px solid #e9ecef;"><td style="padding:12px 0;font-weight:600;color:#0d1b2a;">Pack Quantity</td><td style="padding:12px 0;color:#6c757d;">16 batteries</td></tr>
+        <tr style="border-bottom:1px solid #e9ecef;"><td style="padding:12px 0;font-weight:600;color:#0d1b2a;">Shelf Life</td><td style="padding:12px 0;color:#6c757d;">20 years</td></tr>
+        <tr style="border-bottom:1px solid #e9ecef;"><td style="padding:12px 0;font-weight:600;color:#0d1b2a;">Temperature Range</td><td style="padding:12px 0;color:#6c757d;">−40°F to 140°F (−40°C to 60°C)</td></tr>
+        <tr><td style="padding:12px 0;font-weight:600;color:#0d1b2a;">Weight</td><td style="padding:12px 0;color:#6c757d;">7.6 oz per pack</td></tr>
+      </table>
+    </div>
+
+    <div class="tab-content" id="tab-reviews">
+      <div style="display:flex;flex-direction:column;gap:24px;">
+
+        <div style="padding:20px;background:#f8f9fa;border-radius:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div style="width:36px;height:36px;border-radius:50%;background:#0d1b2a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">M</div>
+              <div>
+                <div style="font-weight:700;font-size:14px;">Michael T.</div>
+                <div style="font-size:12px;color:#adb5bd;">Verified Purchase · Sept 2025</div>
+              </div>
+            </div>
+            <span style="color:#f4c430;">★★★★★</span>
+          </div>
+          <p style="font-size:14px;color:#495057;">These are the best batteries I've ever used. They last 3× as long as the Duracell alkalines I was using before in my camera. Worth every penny.</p>
+        </div>
+
+        <div style="padding:20px;background:#f8f9fa;border-radius:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div style="width:36px;height:36px;border-radius:50%;background:#243b55;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">S</div>
+              <div>
+                <div style="font-weight:700;font-size:14px;">Sarah K.</div>
+                <div style="font-size:12px;color:#adb5bd;">Verified Purchase · Aug 2025</div>
+              </div>
+            </div>
+            <span style="color:#f4c430;">★★★★★</span>
+          </div>
+          <p style="font-size:14px;color:#495057;">Ordered these for my kids' toys and wireless keyboard. The price on BatteryPro is better than Amazon. Fast shipping too!</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-faq">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="padding:16px;background:#f8f9fa;border-radius:8px;">
+          <div style="font-weight:700;color:#0d1b2a;margin-bottom:6px;">Are these compatible with all AA devices?</div>
+          <p style="font-size:14px;color:#6c757d;">Yes. Energizer Ultimate Lithium AA batteries are compatible with all devices that use standard AA batteries. They perform exceptionally well in high-drain devices like cameras, flashlights, and toys.</p>
+        </div>
+        <div style="padding:16px;background:#f8f9fa;border-radius:8px;">
+          <div style="font-weight:700;color:#0d1b2a;margin-bottom:6px;">Can these be recharged?</div>
+          <p style="font-size:14px;color:#6c757d;">No, these are single-use lithium batteries. For rechargeables, we recommend Panasonic Eneloop Pro.</p>
+        </div>
+        <div style="padding:16px;background:#f8f9fa;border-radius:8px;">
+          <div style="font-weight:700;color:#0d1b2a;margin-bottom:6px;">What's the shelf life?</div>
+          <p style="font-size:14px;color:#6c757d;">Up to 20 years when stored at room temperature. Great for emergency preparedness kits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Products -->
+  <section class="section">
+    <div class="section-header">
+      <div><h2>You May Also Like</h2></div>
+      <a href="products.html" class="view-all">View All →</a>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-thumb">🔋<span class="badge badge-hot">🔥 Hot</span></div>
+        <div class="product-info">
+          <div class="product-brand">Duracell</div>
+          <div class="product-name">Optimum AA 40-Pack</div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(2,841)</span></div>
+          <div class="product-footer"><div class="product-price">$29.99</div><button class="add-cart" onclick="updateCart()">+</button></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-thumb">♻️</div>
+        <div class="product-info">
+          <div class="product-brand">Panasonic</div>
+          <div class="product-name">Eneloop Pro 8-Pack + Charger</div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(987)</span></div>
+          <div class="product-footer"><div class="product-price">$34.95</div><button class="add-cart" onclick="updateCart()">+</button></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-thumb">⚡</div>
+        <div class="product-info">
+          <div class="product-brand">Energizer</div>
+          <div class="product-name">Max Plus AAA 20-Pack</div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(218)</span></div>
+          <div class="product-footer"><div class="product-price">$13.49</div><button class="add-cart" onclick="updateCart()">+</button></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-thumb">🔌</div>
+        <div class="product-info">
+          <div class="product-brand">EBL</div>
+          <div class="product-name">Smart 8-Bay LCD Charger</div>
+          <div class="product-rating"><span class="stars">★★★★☆</span><span class="rating-count">(145)</span></div>
+          <div class="product-footer"><div class="product-price">$28.99</div><button class="add-cart" onclick="updateCart()">+</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="color:#fff;"><div class="logo-icon">⚡</div>Battery<span>Pro</span></div>
+        <p>Your trusted source for premium batteries since 2010.</p>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="#">AA / AAA</a></li><li><a href="#">Lithium</a></li><li><a href="#">Rechargeable</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Bulk Orders</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#">Track Order</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BatteryPro. All rights reserved.</span>
+      <div style="display:flex;gap:16px;"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

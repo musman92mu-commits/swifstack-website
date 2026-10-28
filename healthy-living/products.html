@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Products — Healthy Living International</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  body { padding: 0; }
+  .results-count { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+  .search-box { display: flex; gap: 12px; align-items: center; padding: 16px 0; max-width: 1100px; margin: 0 auto; }
+  .search-input { flex: 1; max-width: 340px; padding: 10px 16px; border: 1px solid var(--border); border-radius: 100px; font-size: 14px; background: white; font-family: 'Inter', sans-serif; color: var(--text); }
+  .search-input:focus { outline: none; border-color: var(--green); }
+  .sort-select { padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; background: white; font-family: 'Inter', sans-serif; color: var(--text); }
+  .no-results { text-align: center; padding: 64px 24px; color: var(--text-muted); font-size: 15px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      Healthy Living International
+      <span>Since 2002 · Real Human Support</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link active">Products</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="coaching.html" class="nav-link">Coaching</a>
+    </div>
+    <a href="checkout.html" class="nav-cart cart-count">🛒 Cart</a>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-subtitle" style="margin-bottom:8px">Dr. Kellas Formulations</div>
+    <h1 class="page-title">All Products</h1>
+    <p class="page-subtitle">55+ natural supplements across 16 health categories</p>
+  </div>
+</div>
+
+<!-- SEARCH BAR -->
+<div style="background:var(--white);border-bottom:1px solid var(--border);padding:0 16px">
+  <div class="search-box">
+    <input type="text" class="search-input" id="searchInput" placeholder="Search products…">
+    <select class="sort-select" id="sortSelect">
+      <option value="default">Sort: Featured</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="name">Name: A–Z</option>
+    </select>
+  </div>
+</div>
+
+<!-- FILTERS BAR -->
+<div class="filters-bar">
+  <div class="filters-inner" id="filtersInner">
+    <button class="filter-btn active" data-cat="all">All Products</button>
+    <button class="filter-btn" data-cat="Anti-Aging">Anti-Aging</button>
+    <button class="filter-btn" data-cat="Anti-Parasites">Anti-Parasites</button>
+    <button class="filter-btn" data-cat="Blood Sugar">Blood Sugar</button>
+    <button class="filter-btn" data-cat="Brain">Brain</button>
+    <button class="filter-btn" data-cat="Cardiovascular">Cardiovascular</button>
+    <button class="filter-btn" data-cat="Detoxification">Detoxification</button>
+    <button class="filter-btn" data-cat="Digestive">Digestive</button>
+    <button class="filter-btn" data-cat="Energy">Energy</button>
+    <button class="filter-btn" data-cat="Immune">Immune</button>
+    <button class="filter-btn" data-cat="Joints">Joints</button>
+    <button class="filter-btn" data-cat="Minerals">Minerals</button>
+    <button class="filter-btn" data-cat="Skin">Skin</button>
+    <button class="filter-btn" data-cat="Sleep">Sleep</button>
+  </div>
+</div>
+
+<!-- PRODUCTS GRID -->
+<section style="padding: 40px 16px 80px;">
+  <div class="container">
+    <div class="results-count" id="resultsCount">Showing all 12 products</div>
+    <div class="prod-grid" id="prodGrid"></div>
+    <div class="no-results" id="noResults" style="display:none">No products found. Try a different search or category.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Healthy Living International</div>
+        <p class="footer-tagline">Premium natural health supplements. Real human support since 2002.</p>
+        <div class="footer-contact">
+          <div class="footer-contact-item">📞 800-704-0986</div>
+          <div class="footer-contact-item">📧 info@healthy-living.org</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <div class="footer-links">
+          <a href="products.html" class="footer-link">All Products</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">About Kent</a>
+          <a href="coaching.html" class="footer-link">Coaching</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Help</div>
+        <div class="footer-links">
+          <a href="coaching.html" class="footer-link">Contact Us</a>
+          <a href="checkout.html" class="footer-link">Checkout</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2002–2026 Healthy Living International, LLC. These statements have not been evaluated by the FDA.</div>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <div class="cart-header-title">Your Cart</div>
+    <button class="cart-close" id="cartCloseBtn">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    <a href="checkout.html" class="btn btn-gold" style="width:100%;justify-content:center">Proceed to Checkout →</a>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script>
+const PRODUCTS = [
+  {id:'e7',name:'E7 — Seven Essentials',cat:'Energy',emoji:'🌾',price:'$59.95',badge:'best',desc:'Flagship food powder — 7 essential nutrients in one daily drink. 5 flavors.',bg:'linear-gradient(135deg,#EDF5EB,#D4EDCA)'},
+  {id:'cleanzym',name:'Cleanzym Digestive Enzymes',cat:'Digestive',emoji:'⚗️',price:'$49.95',badge:'best',desc:"Dr. Kellas's 'most important supplement' — full-spectrum enzyme complex.",bg:'linear-gradient(135deg,#FFF3E0,#FFE0B2)'},
+  {id:'paragon',name:'Paragon Anti-Parasite',cat:'Anti-Parasites',emoji:'🌿',price:'$69.00',badge:'',desc:'25-herb proprietary blend — 180 capsules for comprehensive intestinal support.',bg:'linear-gradient(135deg,#E8F5E9,#C8E6C9)'},
+  {id:'coq10',name:'CoQ10 400mg',cat:'Cardiovascular',emoji:'❤️',price:'$64.25',badge:'',desc:'Premium potency CoQ10 for heart health and cellular energy production.',bg:'linear-gradient(135deg,#FCE4EC,#F8BBD0)'},
+  {id:'ricotriene',name:'Ricotriene',cat:'Anti-Aging',emoji:'🌾',price:'$57.95',badge:'',desc:'Stabilized rice bran concentrate — antioxidants, vitamins E, B, and minerals.',bg:'linear-gradient(135deg,#FFF8E1,#FFECB3)'},
+  {id:'bundle',name:'Eight Day Cleanse Kit',cat:'Detoxification',emoji:'📦',price:'$199.95',badge:'bundle',desc:'Complete kit: E7, enzymes, Paragon, Silver Biotics, pH test strips. Best value.',bg:'linear-gradient(135deg,#E8EAF6,#C5CAE9)'},
+  {id:'pxp',name:'PXP Forte',cat:'Energy',emoji:'⚡',price:'$199.95',badge:'new',desc:'Ultra-fine polysaccharide complex for deep cellular energy and healing support.',bg:'linear-gradient(135deg,#FFFDE7,#FFF9C4)'},
+  {id:'silver',name:'Silver Biotics',cat:'Immune',emoji:'✨',price:'$29.95',badge:'best',desc:'Advanced colloidal silver — 12 variants including sprays, gels, and lozenges.',bg:'linear-gradient(135deg,#E3F2FD,#BBDEFB)'},
+  {id:'miror',name:'Miror EPF',cat:'Detoxification',emoji:'💧',price:'$89.95',badge:'',desc:'Electromagnetic polarization formula for cellular detoxification support.',bg:'linear-gradient(135deg,#E0F7FA,#B2EBF2)'},
+  {id:'nuchido',name:'Nuchido TIME+',cat:'Anti-Aging',emoji:'⏳',price:'$89.00',badge:'new',desc:'NAD+ boosting formula — supports healthy aging at the cellular level.',bg:'linear-gradient(135deg,#F3E5F5,#E1BEE7)'},
+  {id:'minerals',name:'Smart AZ Liquid Minerals',cat:'Minerals',emoji:'💎',price:'$24.95',badge:'',desc:'Full-spectrum liquid mineral supplement — 72 trace elements in bioavailable form.',bg:'linear-gradient(135deg,#E8F5E9,#C8E6C9)'},
+  {id:'sauna',name:'Relax FIR Sauna',cat:'Detoxification',emoji:'🛁',price:'$1,495.00',badge:'',desc:'Far Infrared Sauna for deep detoxification, circulation, and relaxation.',bg:'linear-gradient(135deg,#FBE9E7,#FFCCBC)'},
+];
+
+let activeCat = 'all';
+let searchTerm = '';
+let sortMode = 'default';
+
+function getFiltered() {
+  let list = PRODUCTS.filter(p => {
+    const catMatch = activeCat === 'all' || p.cat === activeCat;
+    const searchMatch = !searchTerm || p.name.toLowerCase().includes(searchTerm) || p.cat.toLowerCase().includes(searchTerm) || p.desc.toLowerCase().includes(searchTerm);
+    return catMatch && searchMatch;
+  });
+  if (sortMode === 'price-asc') list.sort((a,b) => parseFloat(a.price.replace(/[$,]/g,'')) - parseFloat(b.price.replace(/[$,]/g,'')));
+  if (sortMode === 'price-desc') list.sort((a,b) => parseFloat(b.price.replace(/[$,]/g,'')) - parseFloat(a.price.replace(/[$,]/g,'')));
+  if (sortMode === 'name') list.sort((a,b) => a.name.localeCompare(b.name));
+  return list;
+}
+
+function badgeHtml(badge) {
+  if (badge === 'best') return '<span class="prod-badge badge-best">Best Seller</span>';
+  if (badge === 'new') return '<span class="prod-badge badge-new">New</span>';
+  if (badge === 'bundle') return '<span class="prod-badge badge-bundle">Bundle</span>';
+  return '';
+}
+
+function render() {
+  const list = getFiltered();
+  const grid = document.getElementById('prodGrid');
+  const noR = document.getElementById('noResults');
+  const count = document.getElementById('resultsCount');
+
+  count.textContent = `Showing ${list.length} product${list.length !== 1 ? 's' : ''}${activeCat !== 'all' ? ' in ' + activeCat : ''}`;
+
+  if (list.length === 0) { grid.innerHTML = ''; noR.style.display = 'block'; return; }
+  noR.style.display = 'none';
+
+  grid.innerHTML = list.map(p => `
+    <div class="prod-card">
+      <div class="prod-img" style="background:${p.bg}">${badgeHtml(p.badge)}${p.emoji}</div>
+      <div class="prod-body">
+        <div class="prod-cat">${p.cat}</div>
+        <a href="product-detail.html?id=${p.id}"><div class="prod-name">${p.name}</div></a>
+        <div class="prod-desc">${p.desc}</div>
+        <div class="prod-footer">
+          <span class="prod-price">${p.price}</span>
+          <button class="prod-add" onclick="addToCart({id:'${p.id}',name:'${p.name}',price:'${p.price}',emoji:'${p.emoji}'})">Add to Cart</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCat = btn.dataset.cat;
+    render();
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input', e => { searchTerm = e.target.value.toLowerCase(); render(); });
+document.getElementById('sortSelect').addEventListener('change', e => { sortMode = e.target.value; render(); });
+
+// Check URL param for cat
+const urlCat = new URLSearchParams(window.location.search).get('cat');
+if (urlCat) {
+  activeCat = urlCat;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.cat === urlCat);
+  });
+}
+
+render();
+document.querySelectorAll('.nav-cart').forEach(el => el.addEventListener('click', e => { e.preventDefault(); openCart(); }));
+</script>
+</body>
+</html>

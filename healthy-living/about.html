@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Kent — Healthy Living International</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  body { padding: 0; }
+  .timeline { display: flex; flex-direction: column; gap: 0; position: relative; padding-left: 32px; }
+  .timeline::before { content:''; position:absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: var(--sage-light); }
+  .timeline-item { position: relative; padding-bottom: 28px; }
+  .timeline-dot { position: absolute; left: -28px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--green); border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--sage); }
+  .timeline-year { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 4px; }
+  .timeline-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .timeline-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+  .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  @media(max-width:768px){ .values-grid { grid-template-columns: 1fr 1fr; } }
+  @media(max-width:480px){ .values-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      Healthy Living International
+      <span>Since 2002 · Real Human Support</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="coaching.html" class="nav-link">Coaching</a>
+    </div>
+    <a href="checkout.html" class="nav-cart cart-count">🛒 Cart</a>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-subtitle" style="margin-bottom:8px">Our Story</div>
+    <h1 class="page-title">About Healthy Living International</h1>
+    <p class="page-subtitle">22+ years of natural health. One person. Real support.</p>
+  </div>
+</div>
+
+<!-- ABOUT HERO -->
+<section style="padding: 0 16px; background: var(--surface);">
+  <div class="container">
+    <div class="about-hero">
+      <div>
+        <div class="eyebrow">Founded in 2002</div>
+        <h2 class="about-title">Built on a principle, not a trend.</h2>
+        <p class="about-body">
+          Healthy Living International was founded in Orem, Utah in 2002 by Kent Hinkson,
+          inspired by the work and principles of Dr. William R. Kellas. What started as a mission
+          to share Dr. Kellas's formulations has grown into a trusted community of health-focused
+          customers across 7 countries.
+        </p>
+        <div class="about-quote">
+          "The key to health is eliminating toxicities and deficiencies."
+          <div style="font-size:13px;font-style:normal;color:var(--text-muted);margin-top:8px">— Dr. William R. Kellas, Founding Principle</div>
+        </div>
+        <p class="about-body">
+          This simple but profound principle guides every product we carry, every recommendation
+          we make, and every conversation Kent has with customers. Not symptoms. Root causes.
+        </p>
+        <p class="about-body">
+          Our customers stay with us. Many have been purchasing for 5, 10, even 19 years — not
+          because of lock-in or subscriptions, but because they see results and because Kent
+          actually answers the phone.
+        </p>
+      </div>
+      <div class="kent-card">
+        <div class="kent-img">👤</div>
+        <div class="kent-body">
+          <div class="kent-name">Kent Hinkson</div>
+          <div class="kent-role">Founder & Owner, Healthy Living International</div>
+          <div class="kent-contact">
+            <div class="kent-contact-item"><strong>Phone:</strong> 800-704-0986</div>
+            <div class="kent-contact-item"><strong>Local:</strong> 801-331-5260</div>
+            <div class="kent-contact-item"><strong>Email:</strong> info@healthy-living.org</div>
+            <div class="kent-contact-item"><strong>Location:</strong> Orem, Utah 84097</div>
+            <div class="kent-contact-item"><strong>Founded:</strong> 2002</div>
+          </div>
+          <a href="coaching.html" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center">
+            Schedule a Consultation →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<div class="philosophy">
+  <div class="container">
+    <div class="eyebrow" style="color:var(--gold-light)">Our Commitment</div>
+    <blockquote class="phil-quote">"Real human support — no automated systems."</blockquote>
+    <div class="phil-attr">The promise on every page of our website since 2002</div>
+    <p style="color:var(--sage-light);font-size:14px;max-width:560px;margin:20px auto 0;line-height:1.7">
+      When you call or email, Kent personally responds. No call center. No AI chatbot.
+      No intern. You get the founder of the company, who knows every product intimately.
+    </p>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<section style="padding: 64px 16px; background: var(--white);">
+  <div class="container" style="max-width: 780px;">
+    <div class="eyebrow">Our Journey</div>
+    <h2 class="section-heading" style="margin-bottom:40px">22+ years building trust</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2002</div>
+        <div class="timeline-title">Founded in Orem, Utah</div>
+        <div class="timeline-desc">Kent launches Healthy Living International to bring Dr. Kellas's formulations to people nationwide. The original product lineup focuses on foundational nutrition.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2005–2010</div>
+        <div class="timeline-title">Expanding the catalog</div>
+        <div class="timeline-desc">The product range grows to 30+ SKUs across multiple health categories. Word of mouth drives loyalty — customers refer friends and family based on personal results.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2012</div>
+        <div class="timeline-title">International shipping begins</div>
+        <div class="timeline-desc">Demand from Australia, Canada, and Singapore prompts international shipping. Kent handles customer questions from every timezone personally.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2015–2020</div>
+        <div class="timeline-title">55+ products, 16 categories</div>
+        <div class="timeline-desc">The catalog expands to cover a comprehensive range of health needs. Products like PXP Forte and Miror EPF are added for advanced users seeking deeper support.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2026</div>
+        <div class="timeline-title">Still going strong</div>
+        <div class="timeline-desc">Serving customers in 7+ countries. Many customers have been purchasing for over a decade. Kent still personally answers every call and email.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section style="padding: 64px 16px; background: var(--surface);">
+  <div class="container">
+    <div class="eyebrow">What We Stand For</div>
+    <h2 class="section-heading" style="margin-bottom:40px">Our values</h2>
+    <div class="values-grid">
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px">
+        <div style="font-size:32px;margin-bottom:14px">🌿</div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Natural First</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.6">Every product is formulated with natural, bioavailable ingredients. No synthetic binders, no artificial colors, no compromises on quality.</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px">
+        <div style="font-size:32px;margin-bottom:14px">🎯</div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Root Cause Focus</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.6">We don't sell symptom-masking. Every recommendation aims to address why the body is struggling — toxicity or deficiency — not just how it feels.</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px">
+        <div style="font-size:32px;margin-bottom:14px">👤</div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Human Support</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.6">Kent personally answers every call and email. No automation, no scripts, no runaround. You always speak to someone who knows the products deeply.</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px">
+        <div style="font-size:32px;margin-bottom:14px">🤝</div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Long-term Relationships</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.6">Our customers aren't transactions. Loyalty spans 3 to 19 years — built on trust, results, and genuine care for each person's health journey.</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px">
+        <div style="font-size:32px;margin-bottom:14px">🔬</div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Education-Led Sales</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.6">We educate first. Understanding why something works builds lasting trust — and it means customers make the right purchase the first time.</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px">
+        <div style="font-size:32px;margin-bottom:14px">🌍</div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Global Community</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.6">Customers in the US, Canada, Australia, Singapore, France and beyond. Health knows no borders, and neither does our commitment to service.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--cream-dark);padding:64px 16px;text-align:center;">
+  <div class="container" style="max-width:620px">
+    <div class="eyebrow">Ready to start?</div>
+    <h2 class="section-heading">Talk to Kent today</h2>
+    <p style="color:var(--text-muted);margin-bottom:32px;line-height:1.7">Kent personally helps every customer find the right supplement protocol for their goals. No charge, no obligation — just honest guidance from someone who's been helping people with their health for over 22 years.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="coaching.html" class="btn btn-primary">Schedule a Consultation</a>
+      <a href="products.html" class="btn btn-outline">Browse Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Healthy Living International</div>
+        <p class="footer-tagline">Premium natural health supplements. Real human support since 2002.</p>
+        <div class="footer-contact">
+          <div class="footer-contact-item">📞 800-704-0986</div>
+          <div class="footer-contact-item">📧 info@healthy-living.org</div>
+          <div class="footer-contact-item">📍 Orem, Utah 84097</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <div class="footer-links">
+          <a href="products.html" class="footer-link">All Products</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">About Kent</a>
+          <a href="coaching.html" class="footer-link">Health Coaching</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Help</div>
+        <div class="footer-links">
+          <a href="coaching.html" class="footer-link">Contact Us</a>
+          <a href="checkout.html" class="footer-link">Checkout</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2002–2026 Healthy Living International, LLC. These statements have not been evaluated by the FDA.</div>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <div class="cart-header-title">Your Cart</div>
+    <button class="cart-close" id="cartCloseBtn">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    <a href="checkout.html" class="btn btn-gold" style="width:100%;justify-content:center">Proceed to Checkout →</a>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script>
+  document.querySelectorAll('.nav-cart').forEach(el => el.addEventListener('click', e => { e.preventDefault(); openCart(); }));
+</script>
+</body>
+</html>

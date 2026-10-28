@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — Healthy Living International</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  body { padding: 0; }
+  .tab-nav { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 28px; }
+  .tab-btn { padding: 12px 24px; font-size: 14px; font-weight: 600; color: var(--text-muted); background: none; border: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; font-family: 'Inter',sans-serif; transition: color 0.15s; }
+  .tab-btn.active { color: var(--green); border-bottom-color: var(--green); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+  .ingredient-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 12px; }
+  .ingredient-item { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+  .ingredient-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .ingredient-note { font-size: 11px; color: var(--text-muted); }
+  .related-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+  @media(max-width:768px){ .related-grid { grid-template-columns: repeat(2,1fr); } }
+  @media(max-width:480px){ .related-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      Healthy Living International
+      <span>Since 2002 · Real Human Support</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link active">Products</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="coaching.html" class="nav-link">Coaching</a>
+    </div>
+    <a href="checkout.html" class="nav-cart cart-count">🛒 Cart</a>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </div>
+</nav>
+
+<!-- PRODUCT DETAIL -->
+<section style="padding: 0 16px;">
+  <div class="container">
+    <div class="pd-layout" id="pdLayout">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<section style="padding: 0 16px 64px; background: var(--surface);">
+  <div class="container">
+    <div class="tab-nav">
+      <button class="tab-btn active" data-tab="details">Details & Benefits</button>
+      <button class="tab-btn" data-tab="ingredients">Ingredients</button>
+      <button class="tab-btn" data-tab="reviews">Reviews (47)</button>
+      <button class="tab-btn" data-tab="faq">FAQ</button>
+    </div>
+    <div class="tab-panel active" id="tab-details" style="max-width:720px">
+      <h3 style="font-family:'Lora',serif;font-size:20px;margin-bottom:16px;color:var(--text)">Why it works</h3>
+      <p style="color:var(--text-muted);line-height:1.75;margin-bottom:16px">Dr. Kellas spent decades developing formulas that address the root cause of health decline: accumulated toxicities and nutrient deficiencies. This product reflects that philosophy with premium, bioavailable ingredients selected for maximum cellular impact.</p>
+      <p style="color:var(--text-muted);line-height:1.75;margin-bottom:24px">Each batch is manufactured to strict quality standards, ensuring purity and potency. No synthetic binders, no artificial colors, no compromises.</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <span style="color:var(--green);font-size:16px;margin-top:2px">✓</span>
+          <div><strong style="font-size:14px">Premium bioavailable ingredients</strong><div style="font-size:13px;color:var(--text-muted)">Selected for absorption and cellular uptake</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <span style="color:var(--green);font-size:16px;margin-top:2px">✓</span>
+          <div><strong style="font-size:14px">No synthetic fillers or binders</strong><div style="font-size:13px;color:var(--text-muted)">Clean formula philosophy throughout</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <span style="color:var(--green);font-size:16px;margin-top:2px">✓</span>
+          <div><strong style="font-size:14px">Addresses root cause</strong><div style="font-size:13px;color:var(--text-muted)">Based on Dr. Kellas's foundational health principles</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel" id="tab-ingredients">
+      <h3 style="font-family:'Lora',serif;font-size:20px;margin-bottom:16px;color:var(--text)">Key Ingredients</h3>
+      <div class="ingredient-grid" id="ingredientGrid"></div>
+      <p style="font-size:12px;color:var(--text-light);margin-top:20px">*Full ingredient list on product label. These statements have not been evaluated by the FDA.</p>
+    </div>
+    <div class="tab-panel" id="tab-reviews">
+      <h3 style="font-family:'Lora',serif;font-size:20px;margin-bottom:20px;color:var(--text)">Customer Reviews</h3>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px">
+          <div style="color:var(--gold);margin-bottom:8px">★★★★★</div>
+          <p style="font-family:'Lora',serif;font-style:italic;color:var(--text-mid);margin-bottom:12px">"This has been part of my daily routine for 8 years. My energy levels are consistently high and my overall health is outstanding."</p>
+          <div style="font-size:12px;font-weight:600;color:var(--text)">Robert M.</div>
+          <div style="font-size:11px;color:var(--text-muted)">Customer since 2016</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px">
+          <div style="color:var(--gold);margin-bottom:8px">★★★★★</div>
+          <p style="font-family:'Lora',serif;font-style:italic;color:var(--text-mid);margin-bottom:12px">"Kent personally recommended this for my situation. The results speak for themselves — I feel 10 years younger."</p>
+          <div style="font-size:12px;font-weight:600;color:var(--text)">Linda K.</div>
+          <div style="font-size:11px;color:var(--text-muted)">Customer since 2019</div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel" id="tab-faq">
+      <h3 style="font-family:'Lora',serif;font-size:20px;margin-bottom:20px;color:var(--text)">Frequently Asked Questions</h3>
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:680px">
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px">
+          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px">How long before I see results?</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.65">Most customers notice improvements within 2–4 weeks of consistent use. For deeper cellular benefits, a 3-month commitment is recommended.</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px">
+          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px">Can I take this with other medications?</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.65">Please consult your healthcare provider. You're also welcome to call Kent directly at 800-704-0986 for personalized guidance.</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px">
+          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px">Do you ship internationally?</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.65">Yes — we ship to the US, Canada, Australia, Singapore, France and most global destinations. Contact us for specific country availability.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section style="padding: 64px 16px; background: var(--white);">
+  <div class="container">
+    <div class="eyebrow">You Might Also Like</div>
+    <h2 class="section-heading" style="margin-bottom:32px">Related products</h2>
+    <div class="related-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Healthy Living International</div>
+        <p class="footer-tagline">Premium natural health supplements. Real human support since 2002.</p>
+        <div class="footer-contact">
+          <div class="footer-contact-item">📞 800-704-0986</div>
+          <div class="footer-contact-item">📧 info@healthy-living.org</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <div class="footer-links">
+          <a href="products.html" class="footer-link">All Products</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">About Kent</a>
+          <a href="coaching.html" class="footer-link">Coaching</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Help</div>
+        <div class="footer-links">
+          <a href="coaching.html" class="footer-link">Contact Us</a>
+          <a href="checkout.html" class="footer-link">Checkout</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2002–2026 Healthy Living International, LLC. These statements have not been evaluated by the FDA.</div>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <div class="cart-header-title">Your Cart</div>
+    <button class="cart-close" id="cartCloseBtn">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    <a href="checkout.html" class="btn btn-gold" style="width:100%;justify-content:center">Proceed to Checkout →</a>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script>
+const PRODUCTS_DB = {
+  e7: { name:'E7 — Seven Essentials', cat:'Energy', emoji:'🌾', price:'$59.95', bg:'linear-gradient(135deg,#EDF5EB,#D4EDCA)', desc:'Our flagship daily nutrition powder — 7 essential nutrients in one convenient drink. Formulated by Dr. Kellas to address the most common nutrient deficiencies. Available in 5 delicious flavors.', doctor:"Dr. Kellas personally considers E7 his most complete foundational formula — a daily foundation for anyone serious about their health.", stars:5, variants:['Original','Chocolate','Vanilla','Berry','Citrus'], ingredients:[{n:'Spirulina',d:'Complete protein, B12'},{n:'Chlorella',d:'Detox & chlorophyll'},{n:'Barley Grass',d:'Alkalizing green'},{n:'Flaxseed',d:'Omega-3 fatty acids'},{n:'Lecithin',d:'Brain & liver support'},{n:'Vitamin C',d:'Antioxidant'},{n:'Trace Minerals',d:'72 ionic minerals'}] },
+  cleanzym: { name:'Cleanzym Digestive Enzymes', cat:'Digestive', emoji:'⚗️', price:'$49.95', bg:'linear-gradient(135deg,#FFF3E0,#FFE0B2)', desc:"Dr. Kellas's most recommended supplement — a comprehensive digestive enzyme complex that supports nutrient absorption, reduces bloating, and promotes gut health at every stage of digestion.", doctor:"'If I could only take one supplement, it would be digestive enzymes. Without proper digestion, even the best nutrition goes to waste.' — Dr. Kellas", stars:5, variants:['90 Capsules','180 Capsules'], ingredients:[{n:'Protease',d:'Protein digestion'},{n:'Amylase',d:'Carbohydrate breakdown'},{n:'Lipase',d:'Fat digestion'},{n:'Cellulase',d:'Plant fiber breakdown'},{n:'Bromelain',d:'Anti-inflammatory'},{n:'Papain',d:'Protein digestion'},{n:'Lactase',d:'Dairy support'}] },
+  paragon: { name:'Paragon Anti-Parasite', cat:'Anti-Parasites', emoji:'🌿', price:'$69.00', bg:'linear-gradient(135deg,#E8F5E9,#C8E6C9)', desc:'A powerful 25-herb proprietary blend formulated to support intestinal cleansing and parasite elimination. One of Dr. Kellas\'s most trusted protocols. 180 capsules per bottle.', doctor:'Dr. Kellas developed Paragon after discovering that intestinal parasites are far more common than most people realize — and that addressing them often resolves unexplained health issues.', stars:5, variants:['180 Capsules'], ingredients:[{n:'Black Walnut Hull',d:'Traditional anti-parasitic'},{n:'Wormwood',d:'Ancient cleansing herb'},{n:'Clove',d:'Kills parasite eggs'},{n:'Oregano Extract',d:'Antimicrobial'},{n:'Garlic',d:'Natural antifungal'},{n:'Ginger Root',d:'Gut support'}] },
+  coq10: { name:'CoQ10 400mg', cat:'Cardiovascular', emoji:'❤️', price:'$64.25', bg:'linear-gradient(135deg,#FCE4EC,#F8BBD0)', desc:'Premium potency CoQ10 (ubiquinol form) — essential for heart health, cellular energy production, and protection against oxidative stress. 400mg per capsule for maximum efficacy.', doctor:'CoQ10 levels decline with age and are depleted by statin medications. Supplementing with high-potency CoQ10 is one of the most evidence-backed interventions for cardiovascular health.', stars:5, variants:['60 Softgels','120 Softgels'], ingredients:[{n:'CoQ10 (Ubiquinol)',d:'400mg per capsule'},{n:'MCT Oil',d:'Enhanced absorption'},{n:'Vitamin E',d:'Antioxidant synergy'}] },
+  ricotriene: { name:'Ricotriene', cat:'Anti-Aging', emoji:'🌾', price:'$57.95', bg:'linear-gradient(135deg,#FFF8E1,#FFECB3)', desc:'Stabilized rice bran concentrate — one of nature\'s richest sources of tocotrienols (vitamin E family), B vitamins, CoQ10, and over 100 antioxidants. Supports healthy aging at the cellular level.', doctor:'Ricotriene is one of Dr. Kellas\'s foundational anti-aging supplements. The tocotrienol form of vitamin E is significantly more bioavailable than tocopherols and is rarely found in other supplements.', stars:5, variants:['90 Capsules'], ingredients:[{n:'Stabilized Rice Bran',d:'Base concentrate'},{n:'Tocotrienols',d:'Superior vitamin E'},{n:'CoQ10',d:'Cellular energy'},{n:'B Vitamins',d:'Energy metabolism'},{n:'Gamma Oryzanol',d:'Antioxidant'},{n:'Ferulic Acid',d:'Anti-inflammatory'}] },
+  bundle: { name:'Eight Day Cleanse Kit', cat:'Detoxification', emoji:'📦', price:'$199.95', bg:'linear-gradient(135deg,#E8EAF6,#C5CAE9)', desc:'The complete 8-day cleanse protocol: E7 food powder, Cleanzym enzymes, Paragon anti-parasite, Silver Biotics, and pH test strips. Dr. Kellas\'s recommended full-body reset at a bundle price.', doctor:'Dr. Kellas recommends the Eight Day Cleanse at least twice per year as a comprehensive reset — addressing parasites, supporting digestion, alkalizing the body, and flooding cells with nutrition.', stars:5, variants:['Complete Kit'], ingredients:[{n:'E7 Food Powder',d:'1 container'},{n:'Cleanzym Enzymes',d:'1 bottle'},{n:'Paragon',d:'1 bottle'},{n:'Silver Biotics',d:'1 bottle'},{n:'pH Test Strips',d:'1 roll'}] },
+  pxp: { name:'PXP Forte', cat:'Energy', emoji:'⚡', price:'$199.95', bg:'linear-gradient(135deg,#FFFDE7,#FFF9C4)', desc:'Ultra-fine polysaccharide complex derived from purple corn — supports deep cellular energy production, mitochondrial function, and accelerated healing. Premium-tier energy and recovery support.', doctor:"PXP is one of the most profound supplements I've encountered. The ultra-fine particle size allows it to enter the mitochondria directly for cellular-level energy enhancement.", stars:5, variants:['Regular','Royale'], ingredients:[{n:'Purple Corn Extract',d:'Polysaccharide complex'},{n:'Stabilized Rice Bran',d:'Synergistic support'},{n:'Agaricus Blazei',d:'Immune mushroom'}] },
+  silver: { name:'Silver Biotics', cat:'Immune', emoji:'✨', price:'$29.95', bg:'linear-gradient(135deg,#E3F2FD,#BBDEFB)', desc:'Advanced colloidal silver solution supporting immune defense. Available in 12 variants — liquids, sprays, gels, and lozenges — for internal and topical use. Patented SilverSol technology.', doctor:'Silver Biotics uses a uniquely structured silver that is far more effective and safer than old-fashioned colloidal silver. Dr. Kellas recommends it as a first-line immune support tool.', stars:5, variants:['10ppm Liquid','22ppm Liquid','Nasal Spray','Gel','Lozenges'], ingredients:[{n:'Silver Biotics Solution',d:'Structured ionic silver'},{n:'Purified Water',d:'USP grade'}] },
+  miror: { name:'Miror EPF', cat:'Detoxification', emoji:'💧', price:'$89.95', bg:'linear-gradient(135deg,#E0F7FA,#B2EBF2)', desc:'Electromagnetic Polarization Formula — supports cellular detoxification by optimizing cell membrane polarity and eliminating stored environmental toxins at the molecular level.', doctor:'Miror EPF represents the cutting edge of cellular detox. When the cell membrane is properly polarized, the cell can effectively expel toxins and absorb nutrients.', stars:5, variants:['2 fl oz'], ingredients:[{n:'Structured Water',d:'Crystalline matrix'},{n:'Micro Minerals',d:'Ionic electrolytes'},{n:'Fulvic Acid',d:'Cellular transport'}] },
+  nuchido: { name:'Nuchido TIME+', cat:'Anti-Aging', emoji:'⏳', price:'$89.00', bg:'linear-gradient(135deg,#F3E5F5,#E1BEE7)', desc:'NAD+ boosting formula using the whole-systems approach — not just a precursor, but the complete cellular machinery needed for efficient NAD+ production. Supports healthy aging at the DNA level.', doctor:'Unlike simple NMN or NR supplements, Nuchido TIME+ replenishes the entire NAD+ salvage pathway. This is how the body was designed to make NAD+ — and it shows dramatically in test results.', stars:5, variants:['60 Capsules'], ingredients:[{n:'Nicotinamide',d:'NAD+ precursor'},{n:'Niacinamide',d:'B3 vitamin form'},{n:'Alpha Lipoic Acid',d:'SIRT1 activator'},{n:'Green Tea Extract',d:'CD38 inhibitor'},{n:'Zinc',d:'NAD+ synthesis cofactor'}] },
+  minerals: { name:'Smart AZ Liquid Minerals', cat:'Minerals', emoji:'💎', price:'$24.95', bg:'linear-gradient(135deg,#E8F5E9,#C8E6C9)', desc:'Full-spectrum liquid mineral supplement with 72 trace elements in bioavailable ionic form. Supports every enzymatic process in the body — minerals are the foundation of all cellular function.', doctor:"Most people are deficient in multiple minerals — and most mineral supplements use poorly absorbed forms. Smart AZ uses ionically charged minerals that the body can immediately utilize.", stars:5, variants:['2 fl oz','4 fl oz'], ingredients:[{n:'72 Ionic Minerals',d:'Full spectrum trace elements'},{n:'Purified Water',d:'Ionic suspension base'}] },
+  sauna: { name:'Relax FIR Sauna', cat:'Detoxification', emoji:'🛁', price:'$1,495.00', bg:'linear-gradient(135deg,#FBE9E7,#FFCCBC)', desc:'Far Infrared Sauna for deep detoxification, improved circulation, pain relief, and relaxation. FIR wavelengths penetrate 1.5 inches into the body, mobilizing toxins stored in fat cells that conventional saunas cannot reach.', doctor:'The Relax FIR Sauna is the most effective detox tool available outside of a clinical setting. Regular use dramatically accelerates the elimination of heavy metals, pesticides, and other stored toxins.', stars:5, variants:['Standard Unit'], ingredients:[{n:'FIR Carbon Heaters',d:'Full-body coverage'},{n:'EMF Protection',d:'Low-EMF design'},{n:'Portable Design',d:'Sets up in minutes'}] },
+};
+
+const PRODUCTS_LIST = [
+  {id:'e7',name:'E7 — Seven Essentials',cat:'Energy',emoji:'🌾',price:'$59.95',bg:'linear-gradient(135deg,#EDF5EB,#D4EDCA)'},
+  {id:'cleanzym',name:'Cleanzym Digestive Enzymes',cat:'Digestive',emoji:'⚗️',price:'$49.95',bg:'linear-gradient(135deg,#FFF3E0,#FFE0B2)'},
+  {id:'silver',name:'Silver Biotics',cat:'Immune',emoji:'✨',price:'$29.95',bg:'linear-gradient(135deg,#E3F2FD,#BBDEFB)'},
+  {id:'ricotriene',name:'Ricotriene',cat:'Anti-Aging',emoji:'🌾',price:'$57.95',bg:'linear-gradient(135deg,#FFF8E1,#FFECB3)'},
+];
+
+const id = new URLSearchParams(window.location.search).get('id') || 'e7';
+const p = PRODUCTS_DB[id] || PRODUCTS_DB['e7'];
+document.title = p.name + ' — Healthy Living International';
+
+let qty = 1;
+const pdLayout = document.getElementById('pdLayout');
+pdLayout.innerHTML = `
+  <div>
+    <div class="pd-img-box" style="background:${p.bg}">${p.emoji}</div>
+  </div>
+  <div>
+    <div class="pd-breadcrumb">
+      <a href="index.html" style="color:var(--text-muted)">Home</a>
+      <span>›</span>
+      <a href="products.html" style="color:var(--text-muted)">Products</a>
+      <span>›</span>
+      <span style="color:var(--text)">${p.name}</span>
+    </div>
+    <div class="pd-cat">${p.cat}</div>
+    <h1 class="pd-title">${p.name}</h1>
+    <div class="pd-stars">${'★'.repeat(p.stars)}${'☆'.repeat(5-p.stars)} <span style="font-size:13px;color:var(--text-muted);font-family:'Inter',sans-serif">4.9 (47 reviews)</span></div>
+    <p class="pd-desc">${p.desc}</p>
+    <div class="pd-doctor">${p.doctor}</div>
+    <div class="pd-price">${p.price}</div>
+    ${p.variants.length > 1 ? `<div class="pd-variants">${p.variants.map((v,i) => `<div class="pd-variant${i===0?' selected':''}" onclick="selectVariant(this)">${v}</div>`).join('')}</div>` : ''}
+    <div style="display:flex;align-items:center;gap:20px;margin-bottom:20px;flex-wrap:wrap">
+      <div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px">Quantity</div>
+        <div class="pd-qty">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <input class="qty-num" id="qtyNum" type="number" value="1" min="1" max="99" readonly>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="pd-add-row">
+      <button class="btn btn-gold" style="flex:1;justify-content:center" onclick="addCurrentToCart()">Add to Cart — ${p.price}</button>
+      <a href="coaching.html" class="btn btn-outline" style="white-space:nowrap">Ask Kent</a>
+    </div>
+    <div class="pd-benefits">
+      <div class="pd-benefit"><span class="pd-benefit-icon">🚚</span> Free shipping on orders over $75</div>
+      <div class="pd-benefit"><span class="pd-benefit-icon">🔒</span> Secure SSL checkout</div>
+      <div class="pd-benefit"><span class="pd-benefit-icon">👤</span> Real human support — call 800-704-0986</div>
+      <div class="pd-benefit"><span class="pd-benefit-icon">📦</span> Ships to US, CA, AU, Singapore, France</div>
+    </div>
+  </div>
+`;
+
+document.getElementById('ingredientGrid').innerHTML = p.ingredients.map(i => `
+  <div class="ingredient-item">
+    <div class="ingredient-name">${i.n}</div>
+    <div class="ingredient-note">${i.d}</div>
+  </div>`).join('');
+
+document.getElementById('relatedGrid').innerHTML = PRODUCTS_LIST.map(r => `
+  <div class="prod-card">
+    <div class="prod-img" style="background:${r.bg}">${r.emoji}</div>
+    <div class="prod-body">
+      <div class="prod-cat">${r.cat}</div>
+      <a href="product-detail.html?id=${r.id}"><div class="prod-name">${r.name}</div></a>
+      <div class="prod-footer" style="margin-top:12px">
+        <span class="prod-price">${r.price}</span>
+        <button class="prod-add" onclick="addToCart({id:'${r.id}',name:'${r.name}',price:'${r.price}',emoji:'${r.emoji}'})">Add</button>
+      </div>
+    </div>
+  </div>`).join('');
+
+function changeQty(d) { qty = Math.max(1, qty + d); document.getElementById('qtyNum').value = qty; }
+function selectVariant(el) { document.querySelectorAll('.pd-variant').forEach(v => v.classList.remove('selected')); el.classList.add('selected'); }
+function addCurrentToCart() { addToCart({id, name:p.name, price:p.price, emoji:p.emoji, qty}); openCart(); }
+
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+document.querySelectorAll('.nav-cart').forEach(el => el.addEventListener('click', e => { e.preventDefault(); openCart(); }));
+</script>
+</body>
+</html>

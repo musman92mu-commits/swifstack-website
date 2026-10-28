@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work | Swifstack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+a{color:inherit;text-decoration:none}a:hover{opacity:.88}
+.chip{font-family:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;cursor:pointer;border:1px solid #cbd5e1;background:#fff;color:#111827;transition:all .15s}
+.chip:hover,.chip.active{border-color:#111827;background:#111827;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 64px;align-items:start}
+.grid>*:nth-child(even){margin-top:72px}
+.card{display:block}
+.card .vis{position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;transition:transform .3s ease}
+.card:hover .vis{transform:scale(1.015)}
+.card:hover h3{color:#1d4ed8}
+.card:hover{opacity:1}
+@media(max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}.grid>*:nth-child(even){margin-top:0}}
+@media(prefers-reduced-motion:reduce){.card .vis{transition:none}}
+.hdr{position:relative}
+.mm-t{display:inline-flex;align-items:center;gap:6px;padding:24px 0}
+.mm-t svg{transition:transform .2s ease}
+.mm:hover .mm-t svg,.mm:focus-within .mm-t svg{transform:rotate(180deg)}
+.mm-p{display:none;position:absolute;left:0;right:0;top:100%;z-index:50;background:#f4f2ec;color:#111827;border-bottom:1px solid #e7e5e4;box-shadow:0 24px 48px rgba(5,12,24,.28);padding:48px 5% 44px;font-size:14px;font-weight:400}
+.mm:hover .mm-p,.mm:focus-within .mm-p{display:block}
+.mm-in{max-width:1200px;margin:0 auto;display:flex;gap:48px}
+.mm-l{flex:0 0 300px;border-right:1px solid #d6d3d1;padding-right:40px}
+.mm-r{flex:1;display:grid;gap:36px 40px}
+.mm-g h4{margin:0 0 16px;padding-bottom:14px;border-bottom:1px solid #d6d3d1;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#57534e}
+.mm-g a{display:block;padding:7px 0;font-size:15px;font-weight:500;color:#111827}
+.mm-g a small{display:block;margin-top:2px;font-size:13px;font-weight:400;line-height:1.4;color:#78716c}
+.mm-g a:hover{color:#3b66f0;opacity:1}
+.svl-wrap{display:block!important;position:relative;min-height:340px}
+.svl{width:340px}
+.sv-t{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-radius:10px;font-size:16px;font-weight:600;color:#111827}
+.sv-t svg{opacity:.45}
+.sv-sub{display:none;position:absolute;left:380px;right:0;top:0;bottom:0;padding:6px 0 0 0}
+.sv-sub h4{margin:0 0 16px;padding-bottom:14px;border-bottom:1px solid #d6d3d1;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#57534e}
+.sv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.sv-grid a{display:block;padding:9px 0;font-size:15px;font-weight:500;color:#111827}
+.sv-grid a:hover{color:#3b66f0;opacity:1}
+.sv:hover .sv-t,.sv:focus-within .sv-t,.svl:not(:hover):not(:focus-within) .sv:first-child .sv-t{background:#ebe8e1}
+.sv:hover .sv-t svg,.sv:focus-within .sv-t svg,.svl:not(:hover):not(:focus-within) .sv:first-child .sv-t svg{opacity:1;color:#3b66f0}
+.sv:hover .sv-sub,.sv:focus-within .sv-sub,.svl:not(:hover):not(:focus-within) .sv:first-child .sv-sub{display:block}
+@media(max-width:900px){.mm-p{display:none!important}.sv-sub{display:none!important}}
+.card[data-hidden]{display:none}
+</style>
+</head>
+<body>
+<div style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#111827;background:#fff;line-height:1.6">
+
+<header class="hdr" style="background:#111827;border-bottom:1px solid rgba(255,255,255,0.08);padding:0 5%;position:sticky;top:0;z-index:100">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px;min-height:68px">
+<a href="index.html" style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.02em">Swifstack</a>
+<nav aria-label="Main" style="display:flex;flex-wrap:wrap;align-items:center;gap:0 32px;font-size:14px;font-weight:500;color:rgba(255,255,255,0.78)">
+<div class="mm"><a class="mm-t" href="index.html#services" style="color:rgba(255,255,255,0.78)">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+<div class="mm-p">
+<div class="mm-in">
+<div class="mm-l">
+<p style="margin:0 0 14px;font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-0.02em;color:#111827">AI-native engineering that ships.</p>
+<p style="margin:0;font-size:15px;line-height:1.65;color:#57534e">Six services, one team: strategy, architecture, and delivery under one roof.</p>
+<a href="index.html#stackclarity" style="display:block;margin-top:28px;background:#ebe8e1;border-radius:14px;padding:20px 22px">
+<span style="display:block;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#3b66f0;margin-bottom:10px">Start here</span>
+<span style="display:block;font-size:16px;font-weight:600;color:#111827;margin-bottom:6px">StackClarity assessment</span>
+<span style="display:block;font-size:14px;line-height:1.55;color:#57534e">A fixed-scope assessment that ends in a prioritized roadmap.</span>
+</a>
+</div>
+<div class="mm-r svl-wrap">
+<div class="svl">
+<div class="sv"><a class="sv-t" href="service-agents.html"><span>AI Agents &amp; Multi-Agent Systems</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
+<div class="sv-sub"><h4>AI Agents &amp; Multi-Agent Systems</h4><div class="sv-grid"><a href="service-agents.html">Generative AI</a><a href="service-agents.html">AI Agents</a><a href="service-agents.html">Multi-Agent Systems</a><a href="service-agents.html">AI Copilots</a><a href="service-agents.html">LLM Integrations</a><a href="service-agents.html">RAG Systems</a></div></div>
+</div>
+<div class="sv"><a class="sv-t" href="service-voice.html"><span>Voice AI &amp; Calling Systems</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
+<div class="sv-sub"><h4>Voice AI &amp; Calling Systems</h4><div class="sv-grid"><a href="service-voice.html">Inbound voice agents</a><a href="service-voice.html">Outbound calling agents</a><a href="service-voice.html">Appointment booking</a><a href="service-voice.html">Call routing</a><a href="service-voice.html">Call analytics</a><a href="service-voice.html">Telephony integrations</a></div></div>
+</div>
+<div class="sv"><a class="sv-t" href="service-software.html"><span>AI-assisted Software Engineering</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
+<div class="sv-sub"><h4>AI-assisted Software Engineering</h4><div class="sv-grid"><a href="service-software.html">Custom web &amp; mobile apps</a><a href="service-software.html">Legacy modernization</a><a href="service-software.html">API integrations</a><a href="service-software.html">MVP builds</a><a href="service-software.html">Code review</a><a href="service-software.html">Technical architecture</a></div></div>
+</div>
+<div class="sv"><a class="sv-t" href="service-cloud.html"><span>Cloud &amp; DevOps</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
+<div class="sv-sub"><h4>Cloud &amp; DevOps</h4><div class="sv-grid"><a href="service-cloud.html">Cloud migration</a><a href="service-cloud.html">CI/CD pipelines</a><a href="service-cloud.html">Infrastructure as code</a><a href="service-cloud.html">Kubernetes</a><a href="service-cloud.html">Monitoring</a><a href="service-cloud.html">Cost optimization</a></div></div>
+</div>
+<div class="sv"><a class="sv-t" href="service-workflow.html"><span>Workflow Automations</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
+<div class="sv-sub"><h4>Workflow Automations</h4><div class="sv-grid"><a href="service-workflow.html">Document processing</a><a href="service-workflow.html">Approval workflows</a><a href="service-workflow.html">CRM &amp; ERP automation</a><a href="service-workflow.html">Data sync</a><a href="service-workflow.html">Human-in-the-loop</a><a href="service-workflow.html">Custom automations</a></div></div>
+</div>
+<div class="sv"><a class="sv-t" href="service-gtm.html"><span>GTM Engineering</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
+<div class="sv-sub"><h4>GTM Engineering</h4><div class="sv-grid"><a href="service-gtm.html">Outbound sequencing</a><a href="service-gtm.html">Lead enrichment</a><a href="service-gtm.html">CRM automation</a><a href="service-gtm.html">Lead routing</a><a href="service-gtm.html">Email deliverability</a><a href="service-gtm.html">Pipeline reporting</a></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="work.html" style="color:#fff">Work</a>
+<div class="mm"><a class="mm-t" href="industries.html" style="color:rgba(255,255,255,0.78)">StackClarity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+<div class="mm-p">
+<div class="mm-in">
+<div class="mm-l">
+<p style="margin:0 0 14px;font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-0.02em;color:#111827">Where StackClarity applies.</p>
+<p style="margin:0;font-size:15px;line-height:1.65;color:#57534e">Each industry has its own AI playbook. We bring the patterns, you bring the domain.</p>
+<a href="index.html#contact" style="display:block;margin-top:28px;background:#ebe8e1;border-radius:14px;padding:20px 22px">
+<span style="display:block;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#3b66f0;margin-bottom:10px">Get started</span>
+<span style="display:block;font-size:16px;font-weight:600;color:#111827;margin-bottom:6px">Book a StackClarity session</span>
+<span style="display:block;font-size:14px;line-height:1.55;color:#57534e">Map your systems and leave with a prioritized roadmap.</span>
+</a>
+</div>
+<div class="mm-r" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+<div class="mm-g"><h4>Regulated</h4>
+<a href="industry-insurance.html">Insurance<small>Submissions, claims, loss runs.</small></a>
+<a href="industry-healthcare.html">Healthcare<small>Intake, scheduling, voice agents.</small></a>
+<a href="industry-financialservices.html">Financial services<small>Underwriting and onboarding.</small></a>
+<a href="industry-legal.html">Legal services<small>First-pass review copilots.</small></a>
+</div>
+<div class="mm-g"><h4>Commerce &amp; hospitality</h4>
+<a href="industry-retail.html">Retail and e-commerce<small>Returns, stockouts, shipping.</small></a>
+<a href="industry-realestate.html">Real estate<small>Leases, addenda, vendor contracts.</small></a>
+<a href="industry-hospitality.html">Hospitality<small>After-hours booking agents.</small></a>
+</div>
+<div class="mm-g"><h4>Operations &amp; software</h4>
+<a href="industry-logistics.html">Logistics and transport<small>Carrier exceptions, routing.</small></a>
+<a href="industry-construction.html">Construction management<small>Submittals, RFIs, change orders.</small></a>
+<a href="industry-saas.html">SaaS<small>Support copilots with product context.</small></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="index.html#contact" style="color:rgba(255,255,255,0.78)">Contact us</a>
+</nav>
+<a href="index.html#contact" style="background:#3b66f0;color:#fff;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;white-space:nowrap">Get in touch</a>
+</div>
+</header>
+
+<section style="background:#111827;padding:88px 5% 72px;position:relative;overflow:hidden">
+<div style="position:absolute;top:-220px;right:-120px;width:640px;height:640px;background:radial-gradient(circle,rgba(167,215,160,0.22),rgba(167,215,160,0) 68%)"></div>
+<div style="position:relative;max-width:1200px;margin:0 auto">
+<p style="margin:0 0 16px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a7d7a0">Work</p>
+<h1 style="margin:0 0 20px;max-width:800px;font-size:clamp(38px,5vw,60px);line-height:1.1;font-weight:800;letter-spacing:-0.03em;color:#fff">Our recent projects</h1>
+<p style="margin:0;max-width:620px;font-size:18px;line-height:1.7;color:rgba(255,255,255,0.72)">Real problems, the systems we built, and what changed for the team. Filter by industry, then open a case study for the full story.</p>
+</div>
+</section>
+
+<section style="background:#fff;padding:56px 5% 96px">
+<div style="max-width:1200px;margin:0 auto">
+<p style="margin:0 0 16px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#475569">Filter by industry</p>
+<div role="group" aria-label="Industries" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:56px" id="filters">
+<button type="button" class="chip active" data-filter="All" onclick="filter(this)">All</button>
+<button type="button" class="chip" data-filter="Insurance" onclick="filter(this)">Insurance</button>
+<button type="button" class="chip" data-filter="Healthcare" onclick="filter(this)">Healthcare</button>
+<button type="button" class="chip" data-filter="Financial services" onclick="filter(this)">Financial services</button>
+<button type="button" class="chip" data-filter="Logistics" onclick="filter(this)">Logistics and transport</button>
+<button type="button" class="chip" data-filter="Retail" onclick="filter(this)">Retail and e-commerce</button>
+<button type="button" class="chip" data-filter="Real estate" onclick="filter(this)">Real estate</button>
+<button type="button" class="chip" data-filter="SaaS" onclick="filter(this)">SaaS</button>
+<button type="button" class="chip" data-filter="Legal" onclick="filter(this)">Legal services</button>
+<button type="button" class="chip" data-filter="Hospitality" onclick="filter(this)">Hospitality</button>
+<button type="button" class="chip" data-filter="Construction" onclick="filter(this)">Construction management</button>
+</div>
+<div class="grid" id="grid">
+
+<a class="card" href="case-insurance.html" data-industry="Insurance">
+<div class="vis" style="background:linear-gradient(135deg,#3b66f0,#1e3a8a)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">01</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">Submissions, loss runs and claims forms read, checked and filed automatically.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">Insurance</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">Document Intelligence for NasClaims: 75% Less Manual Entry</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+<a class="card" href="case-healthcare.html" data-industry="Healthcare">
+<div class="vis" style="background:linear-gradient(135deg,#2e4a3a,#1f2937)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">02</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">Scheduling, reminders and after-hours calls handled by a voice agent.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">Healthcare</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">Voice AI Front Desk for Swope Health: 55% Calls Without Staff</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+<a class="card" href="case-financialservices.html" data-industry="Financial services">
+<div class="vis" style="background:linear-gradient(135deg,#1e3a8a,#111827)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">03</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">Coordinated agents move underwriting and onboarding files through every step.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">Financial services</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">Multi-Agent Onboarding for Payra: 60% Faster Decisions</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+<a class="card" href="case-logistics.html" data-industry="Logistics">
+<div class="vis" style="background:linear-gradient(135deg,#3f6b52,#1f3a2c)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">04</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">Carrier exceptions diagnosed, rebooked and communicated by specialist agents.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">Logistics</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">Exception Agents for ShipFusion: 45% Fewer Manual Touches</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+<a class="card" href="case-retail.html" data-industry="Retail">
+<div class="vis" style="background:linear-gradient(135deg,#4b5563,#1f2937)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">05</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">Returns, stockouts and shipping delays routed and resolved without ops chasing.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">Retail</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">Operations Automation for Obvi: 35 Hours Saved Per Week</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+<a class="card" href="case-realestate.html" data-industry="Real estate">
+<div class="vis" style="background:linear-gradient(135deg,#334155,#111827)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">06</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">Questions answered from leases, addenda and vendor contracts across properties.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">Real estate</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">RAG Assistant for Thomas James Homes: 65% Faster Document Lookup</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+<a class="card" href="case-saas.html" data-industry="SaaS">
+<div class="vis" style="background:linear-gradient(135deg,#1d4ed8,#172554)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">07</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">A copilot inside the support tool drafts answers with product knowledge.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">SaaS</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">Support Copilot for Pulse Point: 45% Faster First Response</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+<a class="card" href="case-legal.html" data-industry="Legal">
+<div class="vis" style="background:linear-gradient(135deg,#4a7c59,#1f3a2c)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">08</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">Documents checked against the firm's own playbook, with cited findings.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">Legal</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">Playbook Copilot for Kaplan Martin LLP: 55% Less Review Time</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+<a class="card" href="case-hospitality.html" data-industry="Hospitality">
+<div class="vis" style="background:linear-gradient(135deg,#6b7280,#1f2937)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">09</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">Bookings and changes captured by a voice agent, day and night.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">Hospitality</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">Voice Booking Agent for TripMerchant: 55% Routine Calls Automated</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+<a class="card" href="case-construction.html" data-industry="Construction">
+<div class="vis" style="background:linear-gradient(135deg,#4a6b3a,#22351b)">
+<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1px);background-size:22px 22px"></div>
+<span style="position:absolute;left:28px;top:24px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,0.75)">10</span>
+<p style="position:absolute;left:28px;right:28px;bottom:76px;margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#fff">Submittals, RFIs and change orders captured, routed and tracked automatically.</p>
+<span style="position:absolute;right:24px;bottom:22px;background:#111;color:#fff;font-size:14px;font-weight:600;padding:12px 20px;border-radius:100px">Construction</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.02em;color:#111827;transition:color .2s ease">Submittal &amp; RFI Automation for Atlas10: 65% Less Manual Logging</h3>
+<span style="font-size:15px;font-weight:700;color:#3b66f0">View case study →</span>
+</a>
+
+</div>
+</div>
+</section>
+
+<section style="background:#fff;padding:0 5% 88px">
+<div style="max-width:1200px;margin:0 auto;background:#3b66f0;border-radius:20px;padding:48px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 32px">
+<div style="flex:1 1 360px"><h2 style="margin:0 0 8px;font-size:30px;line-height:1.2;font-weight:800;letter-spacing:-0.02em;color:#fff">Seeing a similar problem?</h2><p style="margin:0;font-size:17px;line-height:1.6;color:rgba(255,255,255,0.9)">Book a StackClarity session and leave with a prioritized roadmap.</p></div>
+<a href="index.html#contact" style="background:#a7d7a0;color:#111827;padding:15px 30px;border-radius:10px;font-size:15px;font-weight:700">Book a StackClarity Session</a>
+</div>
+</section>
+
+<footer style="background:#111827;border-top:1px solid rgba(255,255,255,0.08);padding:40px 5%">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;font-size:14px;color:rgba(255,255,255,0.65)">
+<span>© 2026 Swifstack. All rights reserved.</span>
+<span style="display:flex;flex-wrap:wrap;gap:8px 28px"><a href="index.html">Home</a><a href="work.html">Work</a><a href="index.html#contact">Contact us</a></span>
+</div>
+</footer>
+
+</div>
+<script>
+function filter(btn){
+  document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  const f=btn.dataset.filter;
+  document.querySelectorAll('#grid .card').forEach(c=>{
+    if(f==='All'||c.dataset.industry===f){c.style.display='block'}
+    else{c.style.display='none'}
+  });
+  // fix stagger on filter
+  let i=0;
+  document.querySelectorAll('#grid .card').forEach(c=>{
+    if(c.style.display!=='none'){c.style.marginTop=i%2===1?'72px':'0';i++}
+  });
+}
+</script>
+</body>
+</html>

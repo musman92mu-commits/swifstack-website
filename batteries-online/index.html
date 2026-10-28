@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BatteryPro — Power That Lasts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✅</span>
+  <span class="toast-msg"></span>
+</div>
+
+<!-- Header -->
+<div class="header-top">⚡ Free Shipping on orders over $35 — Use code: POWER10 for 10% off</div>
+<header>
+  <nav class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">⚡</div>
+      Battery<span>Pro</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="#">Brands</a>
+      <a href="#">Bulk Orders</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <div class="search-bar">
+        <input type="text" placeholder="Search batteries, brands…" />
+        <button>🔍</button>
+      </div>
+      <button class="cart-btn" onclick="showToast('Cart is empty')">
+        🛒
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Category Bar -->
+<div class="categories-section">
+  <div class="cat-tabs">
+    <button class="cat-tab active"><span class="cat-icon">🔋</span>AA / AAA</button>
+    <button class="cat-tab"><span class="cat-icon">⚡</span>Lithium</button>
+    <button class="cat-tab"><span class="cat-icon">♻️</span>Rechargeable</button>
+    <button class="cat-tab"><span class="cat-icon">🚗</span>Automotive</button>
+    <button class="cat-tab"><span class="cat-icon">🔵</span>9V / C / D</button>
+    <button class="cat-tab"><span class="cat-icon">💊</span>Button Cell</button>
+    <button class="cat-tab"><span class="cat-icon">🔌</span>Chargers</button>
+    <button class="cat-tab"><span class="cat-icon">📦</span>Bulk Packs</button>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">⚡ New: Lithium Max Series — Now Available</div>
+        <h1>Power <em>Everything</em><br />You Love</h1>
+        <p>From AAA to automotive — premium batteries for every device, delivered fast to your door.</p>
+        <div class="hero-btns">
+          <a href="products.html" class="btn btn-primary">Shop All Batteries</a>
+          <a href="#" class="btn btn-outline">Bulk Orders</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num">50K+</div><div class="label">Happy Customers</div></div>
+          <div class="hero-stat"><div class="num">200+</div><div class="label">Products</div></div>
+          <div class="hero-stat"><div class="num">15+</div><div class="label">Top Brands</div></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="icon">🔋</div>
+          <div>
+            <div class="name">Duracell Optimum AA 40-Pack</div>
+            <div class="price">$29.99</div>
+          </div>
+          <span class="badge-hot-sm">🔥 Hot</span>
+        </div>
+        <div class="hero-card">
+          <div class="icon">⚡</div>
+          <div>
+            <div class="name">Energizer Lithium AA 16-Pack</div>
+            <div class="price">$19.49 · <s style="opacity:.6">$24.99</s></div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="icon">♻️</div>
+          <div>
+            <div class="name">Panasonic Eneloop Pro 8-Pack</div>
+            <div class="price">$24.95</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="section" style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Best Sellers</h2>
+        <p>Our most popular batteries — trusted by thousands of customers</p>
+      </div>
+      <a href="products.html" class="view-all">View All →</a>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-thumb">
+          🔋
+          <span class="badge badge-hot">🔥 Hot</span>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Duracell</div>
+          <div class="product-name">Optimum AA Batteries 40-Pack</div>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(2,841)</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">$29.99</div>
+            <button class="add-cart" onclick="updateCart()" title="Add to cart">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">
+          ⚡
+          <span class="badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Energizer</div>
+          <div class="product-name">Ultimate Lithium AA 16-Pack</div>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(1,520)</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">$19.49<span class="old">$24.99</span></div>
+            <button class="add-cart" onclick="updateCart()" title="Add to cart">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">
+          ♻️
+          <span class="badge badge-sale">-18%</span>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Panasonic</div>
+          <div class="product-name">Eneloop Pro Rechargeable AA 8-Pack + Charger</div>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(987)</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">$34.95<span class="old">$42.50</span></div>
+            <button class="add-cart" onclick="updateCart()" title="Add to cart">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">🔵</div>
+        <div class="product-info">
+          <div class="product-brand">Rayovac</div>
+          <div class="product-name">High Energy AAA Batteries 24-Pack</div>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(654)</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">$12.99</div>
+            <button class="add-cart" onclick="updateCart()" title="Add to cart">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Trust Strip -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-items">
+      <div class="trust-item">
+        <div class="icon">🚚</div>
+        <div class="title">Free Shipping</div>
+        <div class="desc">On all orders over $35</div>
+      </div>
+      <div class="trust-item">
+        <div class="icon">🔒</div>
+        <div class="title">Secure Checkout</div>
+        <div class="desc">256-bit SSL encryption</div>
+      </div>
+      <div class="trust-item">
+        <div class="icon">↩️</div>
+        <div class="title">Easy Returns</div>
+        <div class="desc">30-day hassle-free returns</div>
+      </div>
+      <div class="trust-item">
+        <div class="icon">🏆</div>
+        <div class="title">Top Brands Only</div>
+        <div class="desc">100% genuine products</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- New Arrivals -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>New Arrivals</h2>
+        <p>Just landed — fresh stock from top brands</p>
+      </div>
+      <a href="products.html" class="view-all">View All →</a>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-thumb">
+          🔋
+          <span class="badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Duracell</div>
+          <div class="product-name">CopperTop 9V Batteries 6-Pack</div>
+          <div class="product-rating"><span class="stars">★★★★☆</span><span class="rating-count">(312)</span></div>
+          <div class="product-footer">
+            <div class="product-price">$14.99</div>
+            <button class="add-cart" onclick="updateCart()">+</button>
+          </div>
+        </div>
+      </div>
+
+      <a href="product-detail.html" class="product-card" style="display:block;">
+        <div class="product-thumb">
+          ⚡
+          <span class="badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Energizer</div>
+          <div class="product-name">Max Plus AAA Batteries 20-Pack</div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(218)</span></div>
+          <div class="product-footer">
+            <div class="product-price">$13.49</div>
+            <button class="add-cart" onclick="event.preventDefault(); updateCart()">+</button>
+          </div>
+        </div>
+      </a>
+
+      <div class="product-card">
+        <div class="product-thumb">🔌</div>
+        <div class="product-info">
+          <div class="product-brand">EBL</div>
+          <div class="product-name">Smart Battery Charger 8-Bay LCD</div>
+          <div class="product-rating"><span class="stars">★★★★☆</span><span class="rating-count">(145)</span></div>
+          <div class="product-footer">
+            <div class="product-price">$28.99</div>
+            <button class="add-cart" onclick="updateCart()">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">💊</div>
+        <div class="product-info">
+          <div class="product-brand">Energizer</div>
+          <div class="product-name">CR2032 Button Cell 12-Pack</div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(503)</span></div>
+          <div class="product-footer">
+            <div class="product-price">$9.99</div>
+            <button class="add-cart" onclick="updateCart()">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Promo Banner -->
+<div class="container">
+  <div class="promo-banner">
+    <div>
+      <h2>🏢 Need Batteries in Bulk?</h2>
+      <p>Special pricing for businesses, schools, and large orders. Get a custom quote today.</p>
+    </div>
+    <a href="#" class="btn btn-white">Get a Bulk Quote</a>
+  </div>
+</div>
+
+<!-- Brands -->
+<div class="brands-section">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:24px;">
+      <h2 style="font-size:20px;">Brands We Carry</h2>
+    </div>
+    <div class="brands-row">
+      <div class="brand-pill">DURACELL</div>
+      <div class="brand-pill">ENERGIZER</div>
+      <div class="brand-pill">PANASONIC</div>
+      <div class="brand-pill">RAYOVAC</div>
+      <div class="brand-pill">AMAZONBASICS</div>
+      <div class="brand-pill">VARTA</div>
+      <div class="brand-pill">EBL</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="color:#fff;font-size:20px;">
+          <div class="logo-icon">⚡</div>
+          Battery<span style="color:#93C5FD;">Pro</span>
+        </div>
+        <p>Your trusted source for premium batteries since 2010. We stock every major brand at competitive prices, with fast shipping nationwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">AA / AAA Batteries</a></li>
+          <li><a href="#">Lithium Batteries</a></li>
+          <li><a href="#">Rechargeable</a></li>
+          <li><a href="#">Automotive</a></li>
+          <li><a href="#">Button Cell</a></li>
+          <li><a href="#">Chargers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Bulk Orders</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Affiliates</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Track My Order</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BatteryPro. All rights reserved.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
