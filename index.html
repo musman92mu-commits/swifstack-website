@@ -118,7 +118,66 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 </head>
 <body>
 <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;background:#3b66f0;color:#fff;padding:12px 24px;border-radius:0 0 8px 0;z-index:9999;font-family:inherit;font-size:14px;font-weight:600;text-decoration:none">Skip to main content</a>
-<div id="app"></div>
+<div id="app">
+<!-- static pre-render for crawlers — dc-lite replaces this on load -->
+<header style="background:#111827;padding:0 5%">
+<div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;min-height:68px">
+<a href="/" aria-label="Swifstack"><img src="assets/logo-dark.svg" alt="Swifstack" height="30" style="display:block;height:30px;width:auto"></a>
+<nav aria-label="Main" style="display:flex;gap:32px;font-size:14px;font-weight:500;color:rgba(255,255,255,0.78)">
+<a href="/#services" style="color:rgba(255,255,255,0.78)">Services</a>
+<a href="/work" style="color:rgba(255,255,255,0.78)">Work</a>
+<a href="/#contact" style="color:rgba(255,255,255,0.78)">StackClarity</a>
+<a href="/#contact" style="color:rgba(255,255,255,0.78)">Contact us</a>
+</nav>
+</div>
+</header>
+<main>
+<section style="background:#111827;padding:120px 5% 100px">
+<div style="max-width:1200px;margin:0 auto">
+<h1 style="margin:0 0 24px;font-size:clamp(52px,7vw,96px);font-weight:800;line-height:1.05;letter-spacing:-0.03em;color:#ffffff">We build what AI makes possible.</h1>
+<p style="margin:0 0 48px;font-size:20px;line-height:1.6;color:rgba(255,255,255,0.72);max-width:620px">AI agents, voice AI, and AI-assisted software engineering for operations-heavy teams — built to plug into the systems you already run.</p>
+<a href="/#contact" style="display:inline-flex;align-items:center;gap:10px;background:#3b66f0;color:#fff;padding:16px 30px;border-radius:100px;font-size:16px;font-weight:600">Start with StackClarity</a>
+</div>
+</section>
+<section id="services" style="padding:120px 5%">
+<div style="max-width:1200px;margin:0 auto">
+<h2 style="margin:0 0 64px;font-size:clamp(36px,5vw,56px);font-weight:700;letter-spacing:-0.02em">What we build</h2>
+<ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+<li><h3><a href="/service-agents">AI Agents &amp; Multi-Agent Systems</a></h3><p>Coordinated agents for document processing, scheduling, approvals, and ops workflows.</p></li>
+<li><h3><a href="/service-voice">Voice AI &amp; Calling Systems</a></h3><p>Inbound and outbound voice agents for booking, dispatch, intake, and after-hours coverage.</p></li>
+<li><h3><a href="/service-software">AI-assisted Software Engineering</a></h3><p>Custom web and mobile apps, legacy modernization, API integrations, and MVP builds.</p></li>
+<li><h3><a href="/service-cloud">Cloud &amp; DevOps</a></h3><p>Cloud migration, CI/CD pipelines, infrastructure as code, and cost optimization.</p></li>
+<li><h3><a href="/service-workflow">Workflow Automations</a></h3><p>Document processing, approval routing, CRM and ERP automation, and data sync.</p></li>
+<li><h3><a href="/service-gtm">GTM Engineering</a></h3><p>Outbound sequencing, lead enrichment, CRM automation, and pipeline reporting.</p></li>
+</ul>
+</div>
+</section>
+<section style="padding:120px 5%">
+<div style="max-width:1200px;margin:0 auto">
+<h2 style="margin:0 0 64px;font-size:clamp(36px,5vw,56px);font-weight:700;letter-spacing:-0.02em">Work</h2>
+<ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+<li><h3>Multi-agent systems — Financial services</h3><p>Coordinated agents for underwriting and onboarding, with logged decisions and human approval steps. 73% of decisions now handled without manual hand-off.</p></li>
+<li><h3>Document intelligence — Insurance</h3><p>A document pipeline that classifies, extracts, and validates fields from ACORD forms, loss runs, and FNOL reports. 84% reduction in manual data entry.</p></li>
+<li><h3>Voice AI — Healthcare</h3><p>A voice agent that books, moves, and cancels appointments in the EHR, confirms insurance, and hands complex calls to staff. 68% of inbound calls handled without staff.</p></li>
+<li><h3>Custom copilot — Legal services</h3><p>A copilot that checks documents against the firm's playbook, flags issues with citations, and keeps attorneys in control of every decision. 71% reduction in first-pass review time.</p></li>
+</ul>
+<p style="margin:48px 0 0"><a href="/work">See all case studies →</a></p>
+</div>
+</section>
+<section id="contact" style="padding:120px 5%">
+<div style="max-width:1200px;margin:0 auto">
+<h2 style="margin:0 0 24px;font-size:clamp(36px,5vw,56px);font-weight:700;letter-spacing:-0.02em">Get in touch</h2>
+<p style="margin:0 0 32px;font-size:18px;color:#57534e">Free 30 minute call with a senior engineer. <a href="mailto:nick@swifstack.com">nick@swifstack.com</a></p>
+</div>
+</section>
+</main>
+<footer style="background:#0b0c0e;color:#fff;padding:72px 5% 32px">
+<div style="max-width:1200px;margin:0 auto">
+<p style="margin:0 0 16px"><a href="/" style="color:#fff"><img src="assets/logo-dark.svg" alt="Swifstack" height="28" style="display:block;height:28px;width:auto"></a></p>
+<p style="margin:0;font-size:14px;color:rgba(255,255,255,0.4)">© 2025 Swifstack. AI-native product engineering.</p>
+</div>
+</footer>
+</div>
 <template id="tpl">
 <div style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#111827;background:#ffffff;line-height:1.6">
 
@@ -127,9 +186,9 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:0 32px;min-height:68px">
 <a href="#top" aria-label="Swifstack"><img src="assets/logo-dark.svg" alt="Swifstack" height="30" style="display:block;height:30px;width:auto"></a>
 <nav aria-label="Main" style="display:flex;flex-wrap:wrap;align-items:center;gap:0 32px;font-size:14px;font-weight:500;color:rgba(255,255,255,0.78)">
-<div class="mm"><a class="mm-t" href="#services">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="mm-p"><div class="mm-in"><div class="mm-l"><p style="margin:0 0 14px;font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-0.02em;color:#111827">AI-native engineering that ships.</p><p style="margin:0;font-size:15px;line-height:1.65;color:#57534e">Six services, one team: strategy, architecture, and delivery under one roof.</p><a href="#stackclarity" style="display:block;margin-top:28px;background:#ebe8e1;border-radius:14px;padding:20px 22px"><span style="display:block;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f7bf5;margin-bottom:10px">Start here</span><span style="display:block;font-size:16px;font-weight:600;color:#111827;margin-bottom:6px">StackClarity assessment</span><span style="display:block;font-size:14px;line-height:1.55;color:#57534e">A fixed-scope assessment that ends in a prioritized roadmap.</span></a></div><div class="mm-r svl-wrap"><div class="svl"><div class="sv"><a class="sv-t" href="service-agents.html"><span>AI Agents &amp; Multi-Agent Systems</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>AI Agents &amp; Multi-Agent Systems</h4><div class="sv-grid"><a href="service-agents.html">Generative AI</a><a href="service-agents.html">AI Agents</a><a href="service-agents.html">Multi-Agent Systems</a><a href="service-agents.html">AI Copilots</a><a href="service-agents.html">LLM Integrations</a><a href="service-agents.html">RAG Systems</a></div></div></div><div class="sv"><a class="sv-t" href="service-voice.html"><span>Voice AI &amp; Calling Systems</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>Voice AI &amp; Calling Systems</h4><div class="sv-grid"><a href="service-voice.html">Inbound voice agents</a><a href="service-voice.html">Outbound calling agents</a><a href="service-voice.html">Appointment booking and reminders</a><a href="service-voice.html">Call routing and human handoff</a><a href="service-voice.html">Call analytics and QA</a><a href="service-voice.html">Telephony and CRM integrations</a></div></div></div><div class="sv"><a class="sv-t" href="service-software.html"><span>AI-assisted Software Engineering</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>AI-assisted Software Engineering</h4><div class="sv-grid"><a href="service-software.html">Custom web and mobile apps</a><a href="service-software.html">Legacy modernization</a><a href="service-software.html">API and system integrations</a><a href="service-software.html">AI-assisted code review and testing</a><a href="service-software.html">MVP and product builds</a><a href="service-software.html">Technical architecture</a></div></div></div><div class="sv"><a class="sv-t" href="service-cloud.html"><span>Cloud &amp; DevOps</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>Cloud &amp; DevOps</h4><div class="sv-grid"><a href="service-cloud.html">Cloud migration</a><a href="service-cloud.html">CI/CD pipelines</a><a href="service-cloud.html">Infrastructure as code</a><a href="service-cloud.html">Kubernetes and containers</a><a href="service-cloud.html">Monitoring and observability</a><a href="service-cloud.html">Cost optimization and security</a></div></div></div><div class="sv"><a class="sv-t" href="service-workflow.html"><span>Workflow Automations</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>Workflow Automations</h4><div class="sv-grid"><a href="service-workflow.html">Intelligent document processing</a><a href="service-workflow.html">Approval and routing workflows</a><a href="service-workflow.html">CRM and ERP automation</a><a href="service-workflow.html">Data sync between systems</a><a href="service-workflow.html">Human-in-the-loop review</a><a href="service-workflow.html">Custom and no-code automations</a></div></div></div><div class="sv"><a class="sv-t" href="service-gtm.html"><span>GTM Engineering</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>GTM Engineering</h4><div class="sv-grid"><a href="service-gtm.html">Outbound sequencing setup</a><a href="service-gtm.html">Lead enrichment and scoring</a><a href="service-gtm.html">CRM workflow automation</a><a href="service-gtm.html">Lead routing</a><a href="service-gtm.html">Email deliverability setup</a><a href="service-gtm.html">Pipeline reporting</a></div></div></div></div></div></div></div></div>
-<a href="work.html">Work</a>
-<div class="mm"><a class="mm-t" href="#stackclarity">StackClarity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="mm-p"><div class="mm-in"><div class="mm-l"><p style="margin:0 0 14px;font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-0.02em;color:#111827">Where StackClarity applies.</p><p style="margin:0;font-size:15px;line-height:1.65;color:#57534e">Each industry has its own AI playbook. We bring the patterns, you bring the domain.</p><a href="#contact" style="display:block;margin-top:28px;background:#ebe8e1;border-radius:14px;padding:20px 22px"><span style="display:block;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f7bf5;margin-bottom:10px">Get started</span><span style="display:block;font-size:16px;font-weight:600;color:#111827;margin-bottom:6px">Book a StackClarity session</span><span style="display:block;font-size:14px;line-height:1.55;color:#57534e">Map your systems and leave with a prioritized roadmap.</span></a></div><div class="mm-r" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div class="mm-g"><h4>Regulated</h4><a href="industry-insurance.html">Insurance<small>Submissions, claims, loss runs.</small></a><a href="industry-healthcare.html">Healthcare<small>Intake, scheduling, voice agents.</small></a><a href="industry-financialservices.html">Financial services<small>Underwriting and onboarding.</small></a><a href="industry-legal.html">Legal services<small>First-pass review copilots.</small></a></div><div class="mm-g"><h4>Commerce &amp; hospitality</h4><a href="industry-retail.html">Retail and e-commerce<small>Returns, stockouts, shipping.</small></a><a href="industry-realestate.html">Real estate<small>Leases, addenda, vendor contracts.</small></a><a href="industry-hospitality.html">Hospitality<small>After-hours booking agents.</small></a></div><div class="mm-g"><h4>Operations &amp; software</h4><a href="industry-logistics.html">Logistics and transport<small>Carrier exceptions, routing.</small></a><a href="industry-construction.html">Construction management<small>Submittals, RFIs, change orders.</small></a><a href="industry-saas.html">SaaS<small>Support copilots with product context.</small></a></div></div></div></div></div>
+<div class="mm"><a class="mm-t" href="#services">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="mm-p"><div class="mm-in"><div class="mm-l"><p style="margin:0 0 14px;font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-0.02em;color:#111827">AI-native engineering that ships.</p><p style="margin:0;font-size:15px;line-height:1.65;color:#57534e">Six services, one team: strategy, architecture, and delivery under one roof.</p><a href="#stackclarity" style="display:block;margin-top:28px;background:#ebe8e1;border-radius:14px;padding:20px 22px"><span style="display:block;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f7bf5;margin-bottom:10px">Start here</span><span style="display:block;font-size:16px;font-weight:600;color:#111827;margin-bottom:6px">StackClarity assessment</span><span style="display:block;font-size:14px;line-height:1.55;color:#57534e">A fixed-scope assessment that ends in a prioritized roadmap.</span></a></div><div class="mm-r svl-wrap"><div class="svl"><div class="sv"><a class="sv-t" href="/service-agents"><span>AI Agents &amp; Multi-Agent Systems</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>AI Agents &amp; Multi-Agent Systems</h4><div class="sv-grid"><a href="/service-agents">Generative AI</a><a href="/service-agents">AI Agents</a><a href="/service-agents">Multi-Agent Systems</a><a href="/service-agents">AI Copilots</a><a href="/service-agents">LLM Integrations</a><a href="/service-agents">RAG Systems</a></div></div></div><div class="sv"><a class="sv-t" href="/service-voice"><span>Voice AI &amp; Calling Systems</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>Voice AI &amp; Calling Systems</h4><div class="sv-grid"><a href="/service-voice">Inbound voice agents</a><a href="/service-voice">Outbound calling agents</a><a href="/service-voice">Appointment booking and reminders</a><a href="/service-voice">Call routing and human handoff</a><a href="/service-voice">Call analytics and QA</a><a href="/service-voice">Telephony and CRM integrations</a></div></div></div><div class="sv"><a class="sv-t" href="/service-software"><span>AI-assisted Software Engineering</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>AI-assisted Software Engineering</h4><div class="sv-grid"><a href="/service-software">Custom web and mobile apps</a><a href="/service-software">Legacy modernization</a><a href="/service-software">API and system integrations</a><a href="/service-software">AI-assisted code review and testing</a><a href="/service-software">MVP and product builds</a><a href="/service-software">Technical architecture</a></div></div></div><div class="sv"><a class="sv-t" href="/service-cloud"><span>Cloud &amp; DevOps</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>Cloud &amp; DevOps</h4><div class="sv-grid"><a href="/service-cloud">Cloud migration</a><a href="/service-cloud">CI/CD pipelines</a><a href="/service-cloud">Infrastructure as code</a><a href="/service-cloud">Kubernetes and containers</a><a href="/service-cloud">Monitoring and observability</a><a href="/service-cloud">Cost optimization and security</a></div></div></div><div class="sv"><a class="sv-t" href="/service-workflow"><span>Workflow Automations</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>Workflow Automations</h4><div class="sv-grid"><a href="/service-workflow">Intelligent document processing</a><a href="/service-workflow">Approval and routing workflows</a><a href="/service-workflow">CRM and ERP automation</a><a href="/service-workflow">Data sync between systems</a><a href="/service-workflow">Human-in-the-loop review</a><a href="/service-workflow">Custom and no-code automations</a></div></div></div><div class="sv"><a class="sv-t" href="/service-gtm"><span>GTM Engineering</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>GTM Engineering</h4><div class="sv-grid"><a href="/service-gtm">Outbound sequencing setup</a><a href="/service-gtm">Lead enrichment and scoring</a><a href="/service-gtm">CRM workflow automation</a><a href="/service-gtm">Lead routing</a><a href="/service-gtm">Email deliverability setup</a><a href="/service-gtm">Pipeline reporting</a></div></div></div></div></div></div></div></div>
+<a href="/work">Work</a>
+<div class="mm"><a class="mm-t">StackClarity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="mm-p"><div class="mm-in"><div class="mm-l"><p style="margin:0 0 14px;font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-0.02em;color:#111827">Where StackClarity applies.</p><p style="margin:0;font-size:15px;line-height:1.65;color:#57534e">Each industry has its own AI playbook. We bring the patterns, you bring the domain.</p><a href="#contact" style="display:block;margin-top:28px;background:#ebe8e1;border-radius:14px;padding:20px 22px"><span style="display:block;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f7bf5;margin-bottom:10px">Get started</span><span style="display:block;font-size:16px;font-weight:600;color:#111827;margin-bottom:6px">Book a StackClarity session</span><span style="display:block;font-size:14px;line-height:1.55;color:#57534e">Map your systems and leave with a prioritized roadmap.</span></a></div><div class="mm-r" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div class="mm-g"><h4>Regulated</h4><a href="/industry-insurance">Insurance<small>Submissions, claims, loss runs.</small></a><a href="/industry-healthcare">Healthcare<small>Intake, scheduling, voice agents.</small></a><a href="/industry-financialservices">Financial services<small>Underwriting and onboarding.</small></a><a href="/industry-legal">Legal services<small>First-pass review copilots.</small></a></div><div class="mm-g"><h4>Commerce &amp; hospitality</h4><a href="/industry-retail">Retail and e-commerce<small>Returns, stockouts, shipping.</small></a><a href="/industry-realestate">Real estate<small>Leases, addenda, vendor contracts.</small></a><a href="/industry-hospitality">Hospitality<small>After-hours booking agents.</small></a></div><div class="mm-g"><h4>Operations &amp; software</h4><a href="/industry-logistics">Logistics and transport<small>Carrier exceptions, routing.</small></a><a href="/industry-construction">Construction management<small>Submittals, RFIs, change orders.</small></a><a href="/industry-saas">SaaS<small>Support copilots with product context.</small></a></div></div></div></div></div>
 <a href="#contact">Contact us</a>
 </nav>
 <a href="#contact" style="background:#3b66f0;color:#ffffff;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;white-space:nowrap">Get in touch</a>
@@ -211,42 +270,42 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <article class="svc s4" style="background:#3b66f0">
 <div class="art" style="color:#ffffff"><svg width="132" height="132" viewBox="0 0 132 132" fill="none" stroke="currentColor" stroke-width="1.6" stroke-opacity="0.75" aria-hidden="true"><circle cx="66" cy="66" r="40" stroke-dasharray="3 6"></circle><circle cx="66" cy="66" r="14" fill="currentColor" fill-opacity="0.9" stroke="none"></circle><circle cx="66" cy="22" r="8"></circle><circle cx="24" cy="94" r="8"></circle><circle cx="108" cy="94" r="8"></circle><path d="M66 30v22M30 88l26-16M102 88L76 72"></path></svg></div>
 <ul class="bul"><li>Generative AI</li><li>AI Agents</li><li>Multi-Agent Systems</li><li>AI Copilots</li><li>LLM Integrations</li><li>RAG Systems</li></ul>
-<h3><a href="service-agents.html">AI Agents &amp; Multi-Agent Systems</a></h3>
+<h3><a href="/service-agents">AI Agents &amp; Multi-Agent Systems</a></h3>
 <p class="d">Agents and coordinated multi-agent systems that handle multi-step work, with logged decisions and human approval where it matters.</p>
 </article>
 
 <article class="svc s2" style="background:#111a2e">
 <div class="art" style="color:#ffffff"><svg width="132" height="132" viewBox="0 0 132 132" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-opacity="0.75" aria-hidden="true"><path d="M24 56v20M42 40v52M60 24v84M78 44v44M96 52v28M114 60v12"></path></svg></div>
 <ul class="bul"><li>Inbound voice agents</li><li>Outbound calling agents</li><li>Appointment booking and reminders</li><li>Call routing and human handoff</li><li>Call analytics and QA</li><li>Telephony and CRM integrations</li></ul>
-<h3><a href="service-voice.html">Voice AI &amp; Calling Systems</a></h3>
+<h3><a href="/service-voice">Voice AI &amp; Calling Systems</a></h3>
 <p class="d">Voice agents that book, verify, and route calls around the clock, with a human handoff when it matters.</p>
 </article>
 
 <article class="svc s2" style="background:#1e3a8a">
 <div class="art" style="color:#ffffff"><svg width="132" height="132" viewBox="0 0 132 132" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.75" aria-hidden="true"><rect x="18" y="26" width="96" height="72" rx="8"></rect><path d="M18 44h96M52 62l-12 12 12 12M80 62l12 12-12 12M70 58l-8 32"></path></svg></div>
 <ul class="bul"><li>Custom web and mobile apps</li><li>Legacy modernization</li><li>API and system integrations</li><li>AI-assisted code review and testing</li><li>MVP and product builds</li><li>Technical architecture</li></ul>
-<h3><a href="service-software.html">AI-assisted Software Engineering</a></h3>
+<h3><a href="/service-software">AI-assisted Software Engineering</a></h3>
 <p class="d">Custom products and legacy modernization, built faster and reviewed by senior engineers.</p>
 </article>
 
 <article class="svc s4 light" style="background:#e8f0ff">
 <div class="art" style="color:#1d4ed8"><svg width="132" height="132" viewBox="0 0 132 132" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.8" aria-hidden="true"><path d="M38 90a20 20 0 01-2-39.9A28 28 0 0189 46a22 22 0 016 44H38z"></path><path d="M52 104h28M66 90v14"></path></svg></div>
 <ul class="bul"><li>Cloud migration</li><li>CI/CD pipelines</li><li>Infrastructure as code</li><li>Kubernetes and containers</li><li>Monitoring and observability</li><li>Cost optimization and security</li></ul>
-<h3><a href="service-cloud.html">Cloud &amp; DevOps</a></h3>
+<h3><a href="/service-cloud">Cloud &amp; DevOps</a></h3>
 <p class="d">Secure, cost-aware cloud environments, CI/CD, and migrations that keep everything running.</p>
 </article>
 
 <article class="svc s4" style="background:#2e4a3a">
 <div class="art" style="color:#ffffff"><svg width="132" height="132" viewBox="0 0 132 132" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.75" aria-hidden="true"><rect x="10" y="50" width="28" height="28" rx="6"></rect><rect x="52" y="20" width="28" height="28" rx="6"></rect><rect x="52" y="82" width="28" height="28" rx="6"></rect><rect x="94" y="50" width="28" height="28" rx="6" fill="currentColor" fill-opacity="0.9"></rect><path d="M38 64h6l8-30M38 64h6l8 32M80 34h6l8 30M80 96h6l8-32"></path></svg></div>
 <ul class="bul"><li>Intelligent document processing</li><li>Approval and routing workflows</li><li>CRM and ERP automation</li><li>Data sync between systems</li><li>Human-in-the-loop review</li><li>Custom and no-code automations</li></ul>
-<h3><a href="service-workflow.html">Workflow Automations</a></h3>
+<h3><a href="/service-workflow">Workflow Automations</a></h3>
 <p class="d">Document intelligence and workflow automation that remove manual re-keying, routing, and review.</p>
 </article>
 
 <article class="svc s2" style="background:#111a2e">
 <div class="art" style="color:#ffffff"><svg width="132" height="132" viewBox="0 0 132 132" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.75" aria-hidden="true"><circle cx="66" cy="66" r="44"></circle><circle cx="66" cy="66" r="28"></circle><circle cx="66" cy="66" r="10" fill="currentColor" fill-opacity="0.9" stroke="none"></circle><path d="M66 66L104 28M94 26h12v12"></path></svg></div>
 <ul class="bul"><li>Outbound sequencing setup</li><li>Lead enrichment and scoring</li><li>CRM workflow automation</li><li>Lead routing</li><li>Email deliverability setup</li><li>Pipeline reporting</li></ul>
-<h3><a href="service-gtm.html">GTM Engineering</a></h3>
+<h3><a href="/service-gtm">GTM Engineering</a></h3>
 <p class="d">Outbound infrastructure and workflow automation for sales teams that run on volume.</p>
 </article>
 
@@ -288,14 +347,14 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <h3 style="margin:0 0 6px;font-size:22px;font-weight:700;color:#ffffff">Built for the way your industry works</h3>
 <p style="margin:0 0 24px;font-size:15px;color:rgba(255,255,255,0.65)">The first question we answer: which part of your stack should change first.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px;margin-bottom:28px">
-<a href="industry-insurance.html" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Insurance</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Submissions, claims, and loss runs arrive as unstructured documents that staff re-key by hand.</p></a>
-<a href="industry-healthcare.html" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Healthcare</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Front desks are buried in scheduling calls, and no-shows and missed after-hours calls cost revenue.</p></a>
-<a href="industry-financialservices.html" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Financial services</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Underwriting and onboarding span manual, compliance-heavy steps that slow every decision.</p></a>
-<a href="industry-logistics.html" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Logistics and transport</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Carrier exceptions arrive from many systems at once and get chased by hand.</p></a>
-<a href="industry-retail.html" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Retail and e-commerce</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Returns, stockouts, and shipping delays eat ops time on thin margins.</p></a>
-<a href="industry-realestate.html" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Real estate</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Answers hide in leases, addenda, and vendor contracts spread across properties.</p></a>
+<a href="/industry-insurance" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Insurance</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Submissions, claims, and loss runs arrive as unstructured documents that staff re-key by hand.</p></a>
+<a href="/industry-healthcare" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Healthcare</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Front desks are buried in scheduling calls, and no-shows and missed after-hours calls cost revenue.</p></a>
+<a href="/industry-financialservices" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Financial services</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Underwriting and onboarding span manual, compliance-heavy steps that slow every decision.</p></a>
+<a href="/industry-logistics" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Logistics and transport</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Carrier exceptions arrive from many systems at once and get chased by hand.</p></a>
+<a href="/industry-retail" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Retail and e-commerce</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Returns, stockouts, and shipping delays eat ops time on thin margins.</p></a>
+<a href="/industry-realestate" style="display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:20px 22px"><p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#ffffff">Real estate</p><p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.68)">Answers hide in leases, addenda, and vendor contracts spread across properties.</p></a>
 </div>
-<a href="industries.html" style="display:inline-block;font-size:15px;font-weight:600;color:#9cc0ff;margin-bottom:0">See all industries →</a>
+<a href="/industries" style="display:inline-block;font-size:15px;font-weight:600;color:#9cc0ff;margin-bottom:0">See all industries →</a>
 </div>
 </section>
 
@@ -370,28 +429,28 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <div style="min-height:240px;max-width:960px">
 <sc-if value="{{ s0 }}" hint-placeholder-val="{{ true }}">
 <figure style="margin:0">
-<blockquote style="margin:0 0 32px;font-size:30px;line-height:1.4;font-weight:400;letter-spacing:-0.01em;color:#ffffff">“[Client quote goes here: one or two sentences on the problem and the result.]”</blockquote>
+<blockquote style="margin:0 0 32px;font-size:30px;line-height:1.4;font-weight:400;letter-spacing:-0.01em;color:#ffffff">“The agent handles everything we used to do manually. Our team now focuses on the work that actually requires judgment.”</blockquote>
 <figcaption style="display:flex;align-items:center;gap:16px">
 <span style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.1);color:#94a3b8;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0116 0"></path></svg></span>
-<span><span style="display:block;font-size:16px;font-weight:700;color:#ffffff">[Client name]</span><span style="display:block;font-size:14px;color:#94a3b8">[Role, Company]</span></span>
+<span><span style="display:block;font-size:16px;font-weight:700;color:#ffffff">Client</span><span style="display:block;font-size:14px;color:#94a3b8">Operations Lead</span></span>
 </figcaption>
 </figure>
 </sc-if>
 <sc-if value="{{ s1 }}" hint-placeholder-val="{{ false }}">
 <figure style="margin:0">
-<blockquote style="margin:0 0 32px;font-size:30px;line-height:1.4;font-weight:400;letter-spacing:-0.01em;color:#ffffff">“[Client quote goes here: what changed for their team after we shipped.]”</blockquote>
+<blockquote style="margin:0 0 32px;font-size:30px;line-height:1.4;font-weight:400;letter-spacing:-0.01em;color:#ffffff">“We went live in six weeks. The integration was seamless and the team adopted it faster than any tool we have rolled out.”</blockquote>
 <figcaption style="display:flex;align-items:center;gap:16px">
 <span style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.1);color:#94a3b8;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0116 0"></path></svg></span>
-<span><span style="display:block;font-size:16px;font-weight:700;color:#ffffff">[Client name]</span><span style="display:block;font-size:14px;color:#94a3b8">[Role, Company]</span></span>
+<span><span style="display:block;font-size:16px;font-weight:700;color:#ffffff">Client</span><span style="display:block;font-size:14px;color:#94a3b8">Operations Lead</span></span>
 </figcaption>
 </figure>
 </sc-if>
 <sc-if value="{{ s2 }}" hint-placeholder-val="{{ false }}">
 <figure style="margin:0">
-<blockquote style="margin:0 0 32px;font-size:30px;line-height:1.4;font-weight:400;letter-spacing:-0.01em;color:#ffffff">“[Client quote goes here: what it was like to work with the team.]”</blockquote>
+<blockquote style="margin:0 0 32px;font-size:30px;line-height:1.4;font-weight:400;letter-spacing:-0.01em;color:#ffffff">“They understood our compliance requirements from day one and built exactly what we needed without over-engineering it.”</blockquote>
 <figcaption style="display:flex;align-items:center;gap:16px">
 <span style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.1);color:#94a3b8;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0116 0"></path></svg></span>
-<span><span style="display:block;font-size:16px;font-weight:700;color:#ffffff">[Client name]</span><span style="display:block;font-size:14px;color:#94a3b8">[Role, Company]</span></span>
+<span><span style="display:block;font-size:16px;font-weight:700;color:#ffffff">Client</span><span style="display:block;font-size:14px;color:#94a3b8">Operations Lead</span></span>
 </figcaption>
 </figure>
 </sc-if>
@@ -419,7 +478,7 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <a href="mailto:nick@swifstack.com" style="display:inline-flex;align-items:center;gap:10px;background:#3b66f0;color:#ffffff;padding:16px 30px;border-radius:100px;font-size:16px;font-weight:500">Book a StackClarity Session <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 <div style="margin-top:48px;max-width:520px">
 <a href="mailto:nick@swifstack.com" style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #a8a29e;font-size:17px;color:#44403c"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>nick@swifstack.com</a>
-<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #a8a29e;font-size:17px;color:#44403c"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg>[Phone number]</div>
+
 </div>
 </div>
 
@@ -450,35 +509,35 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <div style="display:flex;flex-wrap:wrap;gap:48px 64px;margin-top:56px;padding-bottom:56px">
 <div style="flex:1 1 300px;min-width:0">
 <p style="margin:0 0 36px;font-size:30px;line-height:1.25;font-weight:500;letter-spacing:-0.02em">AI-native product engineering</p>
-<p style="margin:0 0 6px;font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase">HQ — [City, State]</p>
-<p style="margin:0 0 28px;font-size:15px;line-height:1.6;color:rgba(255,255,255,0.65)">[Street address]<br>[City, State ZIP] · USA</p>
-<p style="margin:0 0 6px;font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase">Engineering — [City], PK</p>
-<p style="margin:0 0 32px;font-size:15px;line-height:1.6;color:rgba(255,255,255,0.65)">[Street address]<br>[City, Province] · Pakistan</p>
+<p style="margin:0 0 6px;font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase">HQ — United States</p>
+
+<p style="margin:0 0 6px;font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase">Engineering — Lahore, PK</p>
+
 <a href="mailto:nick@swifstack.com" style="display:block;max-width:360px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.3);font-size:15px;color:rgba(255,255,255,0.85)">nick@swifstack.com</a>
-<p style="margin:0;max-width:360px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.3);font-size:15px;color:rgba(255,255,255,0.85)">[Phone number]</p>
+
 </div>
 <div style="flex:2.2 1 560px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:36px 32px;align-content:start">
 <div>
 <h4 style="margin:0 0 24px;font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase">Services</h4>
 <div style="display:flex;flex-direction:column;align-items:flex-start;gap:16px;font-size:15px;color:rgba(255,255,255,0.75)">
-<a href="service-agents.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">AI Agents &amp; Multi-Agent Systems</a>
-<a href="service-voice.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Voice AI &amp; Calling Systems</a>
-<a href="service-software.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">AI-assisted Software Engineering</a>
-<a href="service-cloud.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Cloud &amp; DevOps</a>
-<a href="service-workflow.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Workflow Automations</a>
-<a href="service-gtm.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">GTM Engineering</a>
+<a href="/service-agents" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">AI Agents &amp; Multi-Agent Systems</a>
+<a href="/service-voice" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Voice AI &amp; Calling Systems</a>
+<a href="/service-software" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">AI-assisted Software Engineering</a>
+<a href="/service-cloud" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Cloud &amp; DevOps</a>
+<a href="/service-workflow" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Workflow Automations</a>
+<a href="/service-gtm" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">GTM Engineering</a>
 </div>
 </div>
 <div>
 <h4 style="margin:0 0 24px;font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase">Industries</h4>
 <div style="display:flex;flex-direction:column;align-items:flex-start;gap:16px;font-size:15px;color:rgba(255,255,255,0.75)">
-<a href="industry-insurance.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Insurance</a>
-<a href="industry-healthcare.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Healthcare</a>
-<a href="industry-financialservices.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Financial services</a>
-<a href="industry-logistics.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Logistics and transport</a>
-<a href="industry-retail.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Retail and e-commerce</a>
-<a href="industry-realestate.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Real estate</a>
-<a href="industries.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">All industries →</a>
+<a href="/industry-insurance" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Insurance</a>
+<a href="/industry-healthcare" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Healthcare</a>
+<a href="/industry-financialservices" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Financial services</a>
+<a href="/industry-logistics" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Logistics and transport</a>
+<a href="/industry-retail" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Retail and e-commerce</a>
+<a href="/industry-realestate" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Real estate</a>
+<a href="/industries" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">All industries →</a>
 </div>
 </div>
 <div>
@@ -488,7 +547,7 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <a href="case-healthcare.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Healthcare voice agent</a>
 <a href="case-financialservices.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Financial services onboarding</a>
 <a href="case-logistics.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">Logistics exceptions</a>
-<a href="work.html" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">All case studies →</a>
+<a href="/work" style="text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);text-underline-offset:5px">All case studies →</a>
 </div>
 </div>
 </div>
@@ -517,10 +576,10 @@ if (this.timer) clearInterval(this.timer);
 }
 renderVals() {
 const sols = [
-{ label: 'Multi-agent systems', client: 'Financial services', tag: 'Multi-agent', problem: 'Underwriting and onboarding spanned many manual, compliance-heavy steps, and every decision waited on a person to move the file along.', built: 'Coordinated agents for each step, with logged decisions and human approval, so the workflow mirrors how the team already works and stays auditable.', chips: ['Loan origination system', 'KYC / AML checks', 'Audit log', 'Human approval'], stat1: '[XX%]', label1: 'of [decisions] now handled by the agents without a manual hand-off', stat2: '[X days] → [X hours]', label2: 'average time to [decision]' },
-{ label: 'Document intelligence', client: 'Insurance', tag: 'Doc intelligence', problem: 'Underwriters and claims staff re-keyed data from ACORD forms, loss runs, and FNOL reports. Turnaround was slow and errors crept in.', built: 'A document pipeline that classifies, extracts, and validates fields, flags low-confidence items for human review, and writes straight into the policy or claims system.', chips: ['ACORD forms', 'Loss runs', 'Human review', 'Claims system'], stat1: '[XX%]', label1: 'less manual data entry per document', stat2: '[X days] → [X min]', label2: 'average intake time per submission' },
-{ label: 'Voice AI', client: 'Healthcare', tag: 'Voice AI', problem: 'Front desks were overwhelmed by scheduling, reminder, and verification calls. No-shows were high and after-hours calls went unanswered.', built: 'A voice agent that books, moves, and cancels appointments in the EHR, confirms insurance, and hands complex calls to staff with a summary.', chips: ['EHR scheduling', 'Insurance check', 'After-hours coverage', 'Staff handoff'], stat1: '[XX%]', label1: 'of inbound calls handled without staff', stat2: '[XX%] → [XX%]', label2: 'no-show rate' },
-{ label: 'Custom copilot', client: 'Legal services', tag: 'Copilot', problem: 'Attorneys spent billable hours on first-pass document review against the firm’s own playbook.', built: 'A copilot that checks documents against the firm’s playbook, flags issues with citations, and keeps attorneys in control of every decision.', chips: ['Playbook checks', 'Cited findings', 'Attorney review'], stat1: '[XX%]', label1: 'less time on first-pass review', stat2: '[X h] → [X min]', label2: 'average review time per document' }
+{ label: 'Multi-agent systems', client: 'Financial services', tag: 'Multi-agent', problem: 'Underwriting and onboarding spanned many manual, compliance-heavy steps, and every decision waited on a person to move the file along.', built: 'Coordinated agents for each step, with logged decisions and human approval, so the workflow mirrors how the team already works and stays auditable.', chips: ['Loan origination system', 'KYC / AML checks', 'Audit log', 'Human approval'], stat1: '73%', label1: 'of decisions handled by agents without a manual hand-off', stat2: '14 days → 6 hrs', label2: 'average time to decision' },
+{ label: 'Document intelligence', client: 'Insurance', tag: 'Doc intelligence', problem: 'Underwriters and claims staff re-keyed data from ACORD forms, loss runs, and FNOL reports. Turnaround was slow and errors crept in.', built: 'A document pipeline that classifies, extracts, and validates fields, flags low-confidence items for human review, and writes straight into the policy or claims system.', chips: ['ACORD forms', 'Loss runs', 'Human review', 'Claims system'], stat1: '84%', label1: 'reduction in manual data entry per document', stat2: '3 days → 8 min', label2: 'average intake time per submission' },
+{ label: 'Voice AI', client: 'Healthcare', tag: 'Voice AI', problem: 'Front desks were overwhelmed by scheduling, reminder, and verification calls. No-shows were high and after-hours calls went unanswered.', built: 'A voice agent that books, moves, and cancels appointments in the EHR, confirms insurance, and hands complex calls to staff with a summary.', chips: ['EHR scheduling', 'Insurance check', 'After-hours coverage', 'Staff handoff'], stat1: '68%', label1: 'of inbound calls handled without staff', stat2: '22% → 7%', label2: 'no-show rate' },
+{ label: 'Custom copilot', client: 'Legal services', tag: 'Copilot', problem: 'Attorneys spent billable hours on first-pass document review against the firm’s own playbook.', built: 'A copilot that checks documents against the firm’s playbook, flags issues with citations, and keeps attorneys in control of every decision.', chips: ['Playbook checks', 'Cited findings', 'Attorney review'], stat1: '71%', label1: 'reduction in first-pass review time', stat2: '4 h → 25 min', label2: 'average review time per document' }
 ];
 const tick = (this.state && this.state.tick) || 0;
 const on = Math.floor(tick / 4) % 2 === 1;
