@@ -1,15 +1,25 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Swifstack homepage | Swifstack</title>
+<title>Swifstack — AI-First Product Engineering</title>
+<meta name="description" content="Swifstack builds AI agents, voice AI, and AI-assisted software engineering for operations-heavy teams, built to plug into the systems you already run.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.swifstack.com/">
+<meta property="og:title" content="Swifstack — AI-First Product Engineering">
+<meta property="og:description" content="AI agents, voice AI, and AI-assisted software engineering for operations-heavy teams.">
+<meta property="og:url" content="https://www.swifstack.com/">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
 a{color:inherit;text-decoration:none}a:hover{opacity:.88}
+.skip-link:focus{position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;clip:auto}
 .svc-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
 .s4{grid-column:span 4}.s2{grid-column:span 2}
 .svc{position:relative;overflow:hidden;border-radius:16px;min-height:400px;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;color:#ffffff}
@@ -64,19 +74,18 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 .hs-tabs{display:flex;padding:5px;border:1px solid rgba(255,255,255,.18);border-radius:100px;background:rgba(255,255,255,.04);margin-bottom:16px}
 .hs-tab{flex:1;font-family:inherit;font-size:15px;font-weight:600;padding:13px 10px;border:0;border-radius:100px;cursor:pointer;transition:background .3s ease,color .3s ease}
 .hs-stage{position:relative;aspect-ratio:29/20;border-radius:26px;overflow:hidden;transition:background .5s ease,box-shadow .5s ease}
-.floor{position:absolute;left:0;right:0;bottom:0;height:25%;transition:background .5s ease}
-.belt{position:absolute;left:0;right:0;top:0;height:18px;background:repeating-linear-gradient(90deg,rgba(15,23,42,.08) 0 14px,transparent 14px 28px);border-top:2px solid rgba(15,23,42,.14)}
-.belt.run{animation:belt 1.2s linear infinite}
+.floor{display:none}
+.belt{display:none}
 .cap{position:absolute;left:4%;bottom:5%;display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;padding:9px 16px;border-radius:100px;transition:background .4s ease,color .4s ease}
 .cap i{width:8px;height:8px;border-radius:50%}
 .clock{position:absolute;top:6%;right:5%;width:46px;height:46px;border-radius:50%;border:3px solid #8b93a1}
 .clock i{position:absolute;left:50%;top:50%;width:3px;height:16px;margin:-16px 0 0 -1.5px;background:#6b7280;border-radius:2px;transform-origin:50% 100%;animation:spin 3s linear infinite}
-.pile{position:absolute;left:50%;transform:translateX(-50%);bottom:25%;display:flex;flex-direction:column;align-items:center;gap:0}
+.pile{position:absolute;left:50%;transform:translateX(-50%);bottom:12%;display:flex;flex-direction:column;align-items:center;gap:0}
 .pile .row{display:flex;gap:6px;margin-bottom:-10px}
-.tl{display:inline-flex;width:54px;height:54px;align-items:center;justify-content:center;border-radius:15px;background:#f3f4f6;color:#8b93a1;box-shadow:0 2px 6px rgba(15,23,42,.12);animation:wob 2.4s ease-in-out infinite}
-.pile .row:nth-child(2) .tl{animation-delay:.4s}.pile .row:nth-child(3) .tl{animation-delay:.8s}
+.tl{display:inline-flex;width:54px;height:54px;align-items:center;justify-content:center;border-radius:15px;background:#f3f4f6;color:#8b93a1;box-shadow:0 2px 6px rgba(15,23,42,.12);animation:fall 0.6s cubic-bezier(0.25,0.46,0.45,0.94) both}
+.pile .row:nth-child(3) .tl{animation-delay:0s}.pile .row:nth-child(2) .tl{animation-delay:.35s}.pile .row:nth-child(1) .tl{animation-delay:.65s}
 .halo{position:absolute;left:50%;top:48%;width:56%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(37,99,235,.16),rgba(37,99,235,0) 66%)}
-.botw{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(25% - 10px);width:31%}
+.botw{position:absolute;left:50%;transform:translateX(-50%);bottom:10%;width:31%}
 .bot{display:block;animation:float 3.2s ease-in-out infinite}
 .bot .eyes{transform-box:fill-box;transform-origin:center;animation:blink 4s infinite}
 .bot .hand{animation:tap 1.2s ease-in-out infinite}.bot .h2{animation-delay:.6s}
@@ -92,6 +101,7 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 .pg{display:block;height:100%;width:100%;background:#3b82f6;border-radius:4px;transform-origin:left;animation:prog 6s linear both}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes wob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-2deg)}}
+@keyframes fall{0%{transform:translateY(-320px);opacity:0}60%{transform:translateY(6px);opacity:1}80%{transform:translateY(-3px)}100%{transform:translateY(0);opacity:1}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
 @keyframes tap{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
@@ -107,14 +117,15 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;background:#3b66f0;color:#fff;padding:12px 24px;border-radius:0 0 8px 0;z-index:9999;font-family:inherit;font-size:14px;font-weight:600;text-decoration:none">Skip to main content</a>
 <div id="app"></div>
 <template id="tpl">
 <div style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#111827;background:#ffffff;line-height:1.6">
 
 <!-- NAV -->
-<header class="hdr" style="background:#111827;border-bottom:1px solid rgba(255,255,255,0.08);padding:0 5%">
-<div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px;min-height:68px">
-<a href="#top" style="font-size:21px;font-weight:700;color:#ffffff;letter-spacing:-0.02em">Swifstack</a>
+<header class="hdr" style="background:#111827;padding:0 5%">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:0 32px;min-height:68px">
+<a href="#top" aria-label="Swifstack"><img src="assets/logo-dark.svg" alt="Swifstack" height="30" style="display:block;height:30px;width:auto"></a>
 <nav aria-label="Main" style="display:flex;flex-wrap:wrap;align-items:center;gap:0 32px;font-size:14px;font-weight:500;color:rgba(255,255,255,0.78)">
 <div class="mm"><a class="mm-t" href="#services">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="mm-p"><div class="mm-in"><div class="mm-l"><p style="margin:0 0 14px;font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-0.02em;color:#111827">AI-native engineering that ships.</p><p style="margin:0;font-size:15px;line-height:1.65;color:#57534e">Six services, one team: strategy, architecture, and delivery under one roof.</p><a href="#stackclarity" style="display:block;margin-top:28px;background:#ebe8e1;border-radius:14px;padding:20px 22px"><span style="display:block;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f7bf5;margin-bottom:10px">Start here</span><span style="display:block;font-size:16px;font-weight:600;color:#111827;margin-bottom:6px">StackClarity assessment</span><span style="display:block;font-size:14px;line-height:1.55;color:#57534e">A fixed-scope assessment that ends in a prioritized roadmap.</span></a></div><div class="mm-r svl-wrap"><div class="svl"><div class="sv"><a class="sv-t" href="service-agents.html"><span>AI Agents &amp; Multi-Agent Systems</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>AI Agents &amp; Multi-Agent Systems</h4><div class="sv-grid"><a href="service-agents.html">Generative AI</a><a href="service-agents.html">AI Agents</a><a href="service-agents.html">Multi-Agent Systems</a><a href="service-agents.html">AI Copilots</a><a href="service-agents.html">LLM Integrations</a><a href="service-agents.html">RAG Systems</a></div></div></div><div class="sv"><a class="sv-t" href="service-voice.html"><span>Voice AI &amp; Calling Systems</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>Voice AI &amp; Calling Systems</h4><div class="sv-grid"><a href="service-voice.html">Inbound voice agents</a><a href="service-voice.html">Outbound calling agents</a><a href="service-voice.html">Appointment booking and reminders</a><a href="service-voice.html">Call routing and human handoff</a><a href="service-voice.html">Call analytics and QA</a><a href="service-voice.html">Telephony and CRM integrations</a></div></div></div><div class="sv"><a class="sv-t" href="service-software.html"><span>AI-assisted Software Engineering</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>AI-assisted Software Engineering</h4><div class="sv-grid"><a href="service-software.html">Custom web and mobile apps</a><a href="service-software.html">Legacy modernization</a><a href="service-software.html">API and system integrations</a><a href="service-software.html">AI-assisted code review and testing</a><a href="service-software.html">MVP and product builds</a><a href="service-software.html">Technical architecture</a></div></div></div><div class="sv"><a class="sv-t" href="service-cloud.html"><span>Cloud &amp; DevOps</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>Cloud &amp; DevOps</h4><div class="sv-grid"><a href="service-cloud.html">Cloud migration</a><a href="service-cloud.html">CI/CD pipelines</a><a href="service-cloud.html">Infrastructure as code</a><a href="service-cloud.html">Kubernetes and containers</a><a href="service-cloud.html">Monitoring and observability</a><a href="service-cloud.html">Cost optimization and security</a></div></div></div><div class="sv"><a class="sv-t" href="service-workflow.html"><span>Workflow Automations</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>Workflow Automations</h4><div class="sv-grid"><a href="service-workflow.html">Intelligent document processing</a><a href="service-workflow.html">Approval and routing workflows</a><a href="service-workflow.html">CRM and ERP automation</a><a href="service-workflow.html">Data sync between systems</a><a href="service-workflow.html">Human-in-the-loop review</a><a href="service-workflow.html">Custom and no-code automations</a></div></div></div><div class="sv"><a class="sv-t" href="service-gtm.html"><span>GTM Engineering</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><div class="sv-sub"><h4>GTM Engineering</h4><div class="sv-grid"><a href="service-gtm.html">Outbound sequencing setup</a><a href="service-gtm.html">Lead enrichment and scoring</a><a href="service-gtm.html">CRM workflow automation</a><a href="service-gtm.html">Lead routing</a><a href="service-gtm.html">Email deliverability setup</a><a href="service-gtm.html">Pipeline reporting</a></div></div></div></div></div></div></div></div>
 <a href="work.html">Work</a>
@@ -125,9 +136,10 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 </div>
 </header>
 
+<main id="main-content">
 <!-- 1 HERO -->
 <section id="top" style="background:#111827;padding:96px 5%;position:relative;overflow:hidden">
-<div style="position:absolute;top:-180px;right:-120px;width:640px;height:640px;background:radial-gradient(circle,rgba(167,215,160,0.22),rgba(167,215,160,0) 68%)"></div>
+<div style="position:absolute;top:60px;right:-120px;width:640px;height:640px;background:radial-gradient(circle,rgba(167,215,160,0.22),rgba(167,215,160,0) 68%)"></div>
 <div style="position:absolute;bottom:-260px;left:-160px;width:640px;height:640px;background:radial-gradient(circle,rgba(37,99,235,0.2),rgba(37,99,235,0) 68%)"></div>
 <div style="position:relative;max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:56px">
 <div style="flex:1 1 440px;min-width:0">
@@ -168,7 +180,6 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <sc-if value="{{ t0 }}" hint-placeholder-val="{{ false }}"><span class="tile-in"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M4 7l8 6 8-6"></path></svg></span></sc-if><sc-if value="{{ t1 }}" hint-placeholder-val="{{ false }}"><span class="tile-in"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5M10 13h6M10 17h6"></path></svg></span></sc-if><sc-if value="{{ t2 }}" hint-placeholder-val="{{ false }}"><span class="tile-in"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="8" r="4"></circle><path d="M3 20a7 7 0 0114 0M19 8v6M16 11h6"></path></svg></span></sc-if><sc-if value="{{ t3 }}" hint-placeholder-val="{{ false }}"><span class="tile-in"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg></span></sc-if>
 </sc-if>
 <div class="biz"><p>Your business <span aria-hidden="true">↗</span></p><div class="bars"><sc-for list="{{ bars }}" as="b" hint-placeholder-count="4"><span style="height:{{ b.h }}px;background:{{ b.c }}"></span></sc-for></div></div>
-<div class="floor" style="background:{{ floorBg }}"><div class="belt {{ beltCls }}"></div></div>
 <span class="cap" style="background:{{ capBg }};color:{{ capFg }}"><i style="background:{{ capDot }}"></i>{{ cap }}</span>
 </div>
 <div class="hs-prog"><sc-if value="{{ off }}" hint-placeholder-val="{{ true }}"><span class="pg"></span></sc-if><sc-if value="{{ on }}" hint-placeholder-val="{{ false }}"><span class="pg"></span></sc-if></div>
@@ -405,32 +416,37 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <div style="flex:1 1 380px;min-width:0">
 <h2 style="margin:0 0 28px;font-size:clamp(40px,5.2vw,68px);line-height:1.1;font-weight:300;letter-spacing:-0.03em;color:#111111">Have Questions? <span style="color:#4f7bf5">Let's Talk.</span></h2>
 <p style="margin:0 0 32px;max-width:520px;font-size:20px;line-height:1.6;color:#57534e">Free 30 minute call with a senior engineer, not a salesperson. We have got the answers to your questions.</p>
-<a href="mailto:hello@swiftstack.io" style="display:inline-flex;align-items:center;gap:10px;background:#3b66f0;color:#ffffff;padding:16px 30px;border-radius:100px;font-size:16px;font-weight:500">Book a StackClarity Session <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="mailto:nick@swifstack.com" style="display:inline-flex;align-items:center;gap:10px;background:#3b66f0;color:#ffffff;padding:16px 30px;border-radius:100px;font-size:16px;font-weight:500">Book a StackClarity Session <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 <div style="margin-top:48px;max-width:520px">
-<a href="mailto:hello@swiftstack.io" style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #a8a29e;font-size:17px;color:#44403c"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>hello@swiftstack.io</a>
+<a href="mailto:nick@swifstack.com" style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #a8a29e;font-size:17px;color:#44403c"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>nick@swifstack.com</a>
 <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #a8a29e;font-size:17px;color:#44403c"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg>[Phone number]</div>
 </div>
 </div>
 
-<div style="flex:1 1 460px;min-width:0;background:#faf9f6;border:1px solid #e7e3da;border-radius:24px;padding:44px;box-shadow:0 24px 60px rgba(60,50,30,0.08)">
+<form id="sw-contact-form" novalidate style="flex:1 1 460px;min-width:0;background:#faf9f6;border:1px solid #e7e3da;border-radius:24px;padding:44px;box-shadow:0 24px 60px rgba(60,50,30,0.08)">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-bottom:24px">
-<div><label for="f-name" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">Full name <span style="color:#3b66f0">*</span></label><input id="f-name" type="text" placeholder="Jane Park" style="box-sizing:border-box;width:100%;height:56px;padding:0 22px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;color:#111111"></div>
-<div><label for="f-email" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">Work email <span style="color:#3b66f0">*</span></label><input id="f-email" type="email" placeholder="jane@company.com" style="box-sizing:border-box;width:100%;height:56px;padding:0 22px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;color:#111111"></div>
+<div><label for="f-name" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">Full name <span style="color:#3b66f0">*</span></label><input id="f-name" name="name" type="text" placeholder="Jane Park" style="box-sizing:border-box;width:100%;height:56px;padding:0 22px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;color:#111111"></div>
+<div><label for="f-email" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">Work email <span style="color:#3b66f0">*</span></label><input id="f-email" name="email" type="email" placeholder="jane@company.com" style="box-sizing:border-box;width:100%;height:56px;padding:0 22px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;color:#111111"></div>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-bottom:24px">
-<div><label for="f-topic" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">What's the project about?</label><select id="f-topic" style="box-sizing:border-box;width:100%;height:56px;padding:0 18px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;color:#111111"><option>Select…</option><option>AI Agents &amp; Multi-Agent Systems</option><option>Voice AI &amp; Calling Systems</option><option>AI-assisted Software Engineering</option><option>Cloud &amp; DevOps</option><option>Workflow Automations</option><option>GTM Engineering</option><option>Not sure yet (StackClarity)</option></select></div>
-<div><label for="f-budget" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">Approximate budget</label><select id="f-budget" style="box-sizing:border-box;width:100%;height:56px;padding:0 18px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;color:#111111"><option>Select…</option><option>Under $10k</option><option>$10k to $25k</option><option>$25k to $50k</option><option>$50k to $100k</option><option>$100k+</option><option>Not sure yet</option></select></div>
+<div><label for="f-topic" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">What's the project about?</label><select id="f-topic" name="topic" style="box-sizing:border-box;width:100%;height:56px;padding:0 18px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;color:#111111"><option>Select…</option><option>AI Agents &amp; Multi-Agent Systems</option><option>Voice AI &amp; Calling Systems</option><option>AI-assisted Software Engineering</option><option>Cloud &amp; DevOps</option><option>Workflow Automations</option><option>GTM Engineering</option><option>Not sure yet (StackClarity)</option></select></div>
+<div><label for="f-budget" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">Approximate budget</label><select id="f-budget" name="budget" style="box-sizing:border-box;width:100%;height:56px;padding:0 18px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;color:#111111"><option>Select…</option><option>Under $10k</option><option>$10k to $25k</option><option>$25k to $50k</option><option>$50k to $100k</option><option>$100k+</option><option>Not sure yet</option></select></div>
 </div>
-<div style="margin-bottom:24px"><label for="f-goal" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">What are you trying to ship? <span style="color:#3b66f0">*</span></label><textarea id="f-goal" placeholder="A few sentences about the goal, the constraints, and any deadlines we should know about." style="box-sizing:border-box;width:100%;height:170px;padding:18px 22px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;line-height:1.5;color:#111111;resize:vertical"></textarea></div>
-<div style="border-top:1px solid #e7e3da;padding-top:28px;display:flex;justify-content:flex-end"><button type="button" style="background:#3b66f0;color:#ffffff;border:0;border-radius:100px;padding:0 36px;height:56px;font-family:inherit;font-size:17px;font-weight:500;cursor:pointer">Submit</button></div>
+<div style="margin-bottom:24px"><label for="f-goal" style="display:block;margin-bottom:10px;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#57534e">What are you trying to ship? <span style="color:#3b66f0">*</span></label><textarea id="f-goal" name="message" placeholder="A few sentences about the goal, the constraints, and any deadlines we should know about." style="box-sizing:border-box;width:100%;height:170px;padding:18px 22px;border:1px solid #e0dcd2;border-radius:14px;background:#ffffff;font-family:inherit;font-size:17px;line-height:1.5;color:#111111;resize:vertical"></textarea></div>
+<div style="border-top:1px solid #e7e3da;padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+<div id="sw-form-msg" style="display:none;font-size:14px"></div>
+<button id="sw-submit-btn" type="submit" style="margin-left:auto;background:#3b66f0;color:#ffffff;border:0;border-radius:100px;padding:0 36px;height:56px;font-family:inherit;font-size:17px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:10px">Send message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
 </div>
+</form>
 </div>
 </section>
+
+</main>
 
 <!-- 10 FOOTER -->
 <footer style="background:#0b0c0e;color:#ffffff;padding:72px 5% 32px">
 <div style="max-width:1200px;margin:0 auto">
-<a href="#top" style="display:inline-block;font-size:26px;font-weight:700;letter-spacing:-0.02em;color:#ffffff">Swifstack</a>
+<a href="#top" aria-label="Swifstack" style="display:inline-block"><img src="assets/logo-dark.svg" alt="Swifstack" height="28" style="display:block;height:28px;width:auto"></a>
 <div style="display:flex;flex-wrap:wrap;gap:48px 64px;margin-top:56px;padding-bottom:56px">
 <div style="flex:1 1 300px;min-width:0">
 <p style="margin:0 0 36px;font-size:30px;line-height:1.25;font-weight:500;letter-spacing:-0.02em">AI-native product engineering</p>
@@ -438,7 +454,7 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 <p style="margin:0 0 28px;font-size:15px;line-height:1.6;color:rgba(255,255,255,0.65)">[Street address]<br>[City, State ZIP] · USA</p>
 <p style="margin:0 0 6px;font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase">Engineering — [City], PK</p>
 <p style="margin:0 0 32px;font-size:15px;line-height:1.6;color:rgba(255,255,255,0.65)">[Street address]<br>[City, Province] · Pakistan</p>
-<a href="mailto:hello@swiftstack.io" style="display:block;max-width:360px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.3);font-size:15px;color:rgba(255,255,255,0.85)">hello@swiftstack.io</a>
+<a href="mailto:nick@swifstack.com" style="display:block;max-width:360px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.3);font-size:15px;color:rgba(255,255,255,0.85)">nick@swifstack.com</a>
 <p style="margin:0;max-width:360px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.3);font-size:15px;color:rgba(255,255,255,0.85)">[Phone number]</p>
 </div>
 <div style="flex:2.2 1 560px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:36px 32px;align-content:start">
@@ -518,7 +534,6 @@ offBg: on ? 'transparent' : '#a7d7a0', offFg: on ? 'rgba(255,255,255,0.75)' : '#
 onBg: on ? '#a7d7a0' : 'transparent', onFg: on ? '#111827' : 'rgba(255,255,255,0.75)',
 pickOff: () => this.setState({ tick: 0 }), pickOn: () => this.setState({ tick: 4 }),
 stageBg: on ? '#ffffff' : '#e3e6eb', stageRing: on ? '0 0 0 2px #a7d7a0, 0 0 40px rgba(167,215,160,0.3)' : '0 0 0 2px rgba(255,255,255,0.0)',
-floorBg: on ? '#f3f6fc' : '#d5d9e0', beltCls: on ? 'belt run' : 'belt',
 cap: caps[0], capBg: caps[1], capFg: caps[2], capDot: caps[3],
 t0: on && k === 0, t1: on && k === 1, t2: on && k === 2, t3: on && k === 3,
 bars: barsH.map((h, j) => ({ h: h, c: barsC[j] }))
@@ -552,5 +567,43 @@ dots: [0, 1, 2].map((k) => ({ label: 'Show testimonial ' + (k + 1), bg: k === i 
 mountDC(Component, document.getElementById("app"), document.getElementById("tpl"));
 </script>
 <script src="assets/site.js"></script>
+<script>
+/* Contact form — async Formspree submission
+   TODO for Sir: replace YOUR_FORM_ID with your Formspree form ID from formspree.io */
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('sw-contact-form');
+  if (!form) return;
+  form.setAttribute('action', 'https://formspree.io/f/YOUR_FORM_ID');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = document.getElementById('sw-submit-btn');
+    var msg = document.getElementById('sw-form-msg');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    msg.style.display = 'none';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (r) {
+      if (r.ok) {
+        form.reset();
+        msg.textContent = '✓ Message sent — we\'ll be in touch within one business day.';
+        msg.style.color = '#166534';
+        btn.style.display = 'none';
+      } else {
+        return r.json().then(function (d) { throw new Error(d.error || 'Send failed'); });
+      }
+    }).catch(function (err) {
+      msg.textContent = '✗ ' + (err.message || 'Something went wrong. Try emailing nick@swifstack.com directly.');
+      msg.style.color = '#991b1b';
+      btn.disabled = false;
+      btn.textContent = 'Try again';
+    }).finally(function () {
+      msg.style.display = 'block';
+    });
+  });
+});
+</script>
 </body>
 </html>
