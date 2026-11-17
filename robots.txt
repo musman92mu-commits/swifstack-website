@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Block draft/internal files from crawling
+Disallow: /swifstack-homepage.html
+Disallow: /swifstack-work.html
+Disallow: /swifstack-full-content.html
+Disallow: /404.html
+
 Sitemap: https://www.swifstack.com/sitemap.xml
