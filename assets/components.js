@@ -4,7 +4,7 @@
   /* ── NAV CSS ── */
   var CSS = [
     'a{color:inherit;text-decoration:none}a:hover{opacity:.88}',
-    '.sw-hdr{position:relative;background:#111827;border-bottom:1px solid rgba(255,255,255,.08);padding:0 5%;z-index:100}',
+    '.sw-hdr{position:relative;background:#111827;padding:0 5%;z-index:100}',
     '.sw-hdr-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:8px 20px;min-height:68px}',
     '.sw-logo{font-size:21px;font-weight:700;color:#fff;letter-spacing:-.02em;flex-shrink:0}',
     '.sw-nav{display:flex;flex-wrap:nowrap;align-items:center;gap:0 24px;font-size:14px;font-weight:500;color:rgba(255,255,255,.78)}',
