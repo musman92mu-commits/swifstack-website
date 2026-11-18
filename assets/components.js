@@ -3,6 +3,7 @@
 
   /* ── NAV CSS ── */
   var CSS = [
+    'html,body{margin:0;background:#111827}',
     'a{color:inherit;text-decoration:none}a:hover{opacity:.88}',
     '.sw-hdr{position:relative;background:#111827;padding:0 5%;z-index:100}',
     '.sw-hdr-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:8px 20px;min-height:68px}',
