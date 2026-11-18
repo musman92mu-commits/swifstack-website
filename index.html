@@ -70,7 +70,7 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 @keyframes mq-roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.mq-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center;row-gap:12px}.mq-track .lg[aria-hidden]{display:none}.mq{-webkit-mask-image:none;mask-image:none}}
 .hs{width:100%;max-width:580px}
-.hs-tabs{display:flex;padding:5px;border:1px solid rgba(255,255,255,.18);border-radius:100px;background:rgba(255,255,255,.04);margin-bottom:16px}
+.hs-tabs{display:flex;padding:5px;border-radius:100px;background:#07074d;margin-bottom:16px}
 .hs-tab{flex:1;font-family:inherit;font-size:15px;font-weight:600;padding:13px 10px;border:0;border-radius:100px;cursor:pointer;transition:background .3s ease,color .3s ease}
 .hs-stage{position:relative;aspect-ratio:29/20;border-radius:26px;overflow:hidden;transition:background .5s ease,box-shadow .5s ease}
 .floor{display:none}
@@ -90,7 +90,7 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.88}
 .bot .hand{animation:tap 1.2s ease-in-out infinite}.bot .h2{animation-delay:.6s}
 .bot .glow{animation:pulse 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 .toast{position:absolute;left:50%;top:8%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:10px;background:#0f172a;color:#ffffff;font-size:15px;font-weight:600;padding:10px 18px;border-radius:12px;white-space:nowrap;animation:pop .5s ease both}
-.toast i{width:9px;height:9px;border-radius:50%;background:#a7d7a0}
+.toast i{width:9px;height:9px;border-radius:50%;background:#c8f560}
 .tile-in{position:absolute;left:25%;bottom:calc(25% + 4px);display:inline-flex;width:56px;height:56px;align-items:center;justify-content:center;border-radius:16px;background:#ffffff;color:#3b66f0;box-shadow:0 6px 18px rgba(15,23,42,.18);animation:slide .9s ease both}
 .biz{position:absolute;right:5%;bottom:calc(25% + 6px);width:24%;min-width:120px;background:#ffffff;border-radius:16px;padding:12px 14px 12px;box-shadow:0 2px 10px rgba(15,23,42,.1)}
 .biz p{margin:0 0 8px;font-size:12px;font-weight:700;color:#0f172a}
@@ -661,13 +661,13 @@ const on = Math.floor(tick / 4) % 2 === 1;
 const k = tick % 4;
 const barsH = on ? [14 + k * 6, 22 + k * 9, 30 + k * 10, 40 + k * 8] : [8, 10, 8, 6];
 const barsC = on ? ['#93c5fd', '#60a5fa', '#3b66f0', '#0f172a'] : ['#d1d5db', '#d1d5db', '#d1d5db', '#d1d5db'];
-const caps = on ? ['Your AI teammate, working around the clock', '#a7d7a0', '#111827', '#111827'] : ['Your team, buried in busywork', '#e5e7eb', '#374151', '#6b7280'];
+const caps = on ? ['Your AI teammate, working around the clock', '#c8f560', '#07074d', '#07074d'] : ['Your team, buried in busywork', '#e5e7eb', '#374151', '#6b7280'];
 const hero = {
 off: !on, on: on, mood: on ? 'mood-joy' : 'mood-sad',
-offBg: on ? 'transparent' : '#a7d7a0', offFg: on ? 'rgba(255,255,255,0.75)' : '#111827',
-onBg: on ? '#a7d7a0' : 'transparent', onFg: on ? '#111827' : 'rgba(255,255,255,0.75)',
+offBg: on ? 'transparent' : '#c8f560', offFg: on ? 'rgba(201,220,255,0.85)' : '#07074d',
+onBg: on ? '#c8f560' : 'transparent', onFg: on ? '#07074d' : 'rgba(201,220,255,0.85)',
 pickOff: () => this.setState({ tick: 0 }), pickOn: () => this.setState({ tick: 4 }),
-stageBg: on ? '#ffffff' : '#e3e6eb', stageRing: on ? '0 0 0 2px #a7d7a0, 0 0 40px rgba(167,215,160,0.3)' : '0 0 0 2px rgba(255,255,255,0.0)',
+stageBg: on ? '#ffffff' : '#e3e6eb', stageRing: on ? '0 0 0 6px rgba(200,245,96,0.1), 0 40px 90px rgba(0,0,0,0.45)' : '0 20px 60px rgba(0,0,0,0.3)',
 cap: caps[0], capBg: caps[1], capFg: caps[2], capDot: caps[3],
 t0: on && k === 0, t1: on && k === 1, t2: on && k === 2, t3: on && k === 3,
 bars: barsH.map((h, j) => ({ h: h, c: barsC[j] }))
